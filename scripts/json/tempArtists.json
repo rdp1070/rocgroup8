@@ -1,0 +1,50 @@
+{"influencees": [{
+	"artist": "Kanye West",
+	"genre": "Rap",
+	"influencers": "Jazz"	
+},
+{
+	"artist": "Taylor Swift",
+	"genre": "Pop",
+	"influencers": "Rock"	
+},
+{
+	"artist": "Adele",
+	"genre": "Pop",
+	"influencers": "Rock"	
+},
+{
+	"artist": "Chance the Rapper",
+	"genre": "Rap",
+	"influencers": "Jazz"	
+},
+{
+	"artist": "Justin Timberlake",
+	"genre": "Pop",
+	"influencers": "Jazz"	
+},
+{
+	"artist": "One Direction",
+	"genre": "Pop",
+	"influencers": "Rock"	
+},
+{
+	"artist": "Le Biebs",
+	"genre": "Pop",
+	"influencers": "Rock"	
+},
+{
+	"artist": "Kendrick Lamar",
+	"genre": "Rap",
+	"influencers": "Jazz"	
+},
+{
+	"artist": "Kesha",
+	"genre": "Pop",
+	"influencers": "Jazz"	
+},
+{
+	"artist": "Rihanna",
+	"genre": "Pop",
+	"influencers": "Jazz"	
+}]}
