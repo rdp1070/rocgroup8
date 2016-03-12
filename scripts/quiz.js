@@ -2,7 +2,9 @@
 		
 		var influencees = [];
 		var questions = [];
+		
 		var questionValue, a1, a2, a3, a4;
+		var currentNum = 0;
 		
 		window.onload = init;
 		
@@ -19,8 +21,8 @@
 			a3 = document.querySelector("#a3");
 			a4 = document.querySelector("#a4");
 			
-			a1.onclick = function(e){
-			changeQuestion(1);
+			a1.onclick = a2.onclick = a3.onclick = a4.onclick = function(e){
+			changeQuestion(currentNum);
 			};
 
 			//changeQuestion(1);	
@@ -80,11 +82,20 @@
 		}
 		
 		function changeQuestion(qNum){
-			questionValue.innerHTML = questions[qNum].txt;
-
-			a1.innerHTML = questions[qNum].answers[0].txt;
-			a2.innerHTML = questions[qNum].answers[1].txt;
-			a3.innerHTML = questions[qNum].answers[2].txt;
-			a4.innerHTML = questions[qNum].answers[3].txt;
+			if (questions[qNum]){
+				questionValue.innerHTML = questions[qNum].txt;
+	
+				a1.innerHTML = questions[qNum].answers[0].txt;
+				a2.innerHTML = questions[qNum].answers[1].txt;
+				a3.innerHTML = questions[qNum].answers[2].txt;
+				a4.innerHTML = questions[qNum].answers[3].txt;
+				
+				currentNum++;
+			} else {
+				setArtist();
+			}
 		}
 		
+		function setArtist(){
+
+		}
