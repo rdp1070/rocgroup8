@@ -1,9 +1,13 @@
 		"use strict";
-		window.onload = init;
 		
 		var influencees = [];
 		var questions = [];
 		var questionValue, a1, a2, a3, a4;
+		
+		window.onload = init;
+		
+		
+		//debugger;
 
 		function init() {
 			loadInfluences();
@@ -14,9 +18,14 @@
 			a2 = document.querySelector("#a2");
 			a3 = document.querySelector("#a3");
 			a4 = document.querySelector("#a4");
+			
+			a1.onclick = function(e){
+			changeQuestion(1);
+			};
 
 			//changeQuestion(1);	
 		}
+		
 		
 		/*
 		* Load in the influences from and external JSON file
@@ -75,6 +84,6 @@
 			a1.innerHTML = questions[qNum].answers[0].ans1;
 			a2.innerHTML = questions[qNum].answers[0].ans2;
 			a3.innerHTML = questions[qNum].answers[0].ans3;
-			//a4.innerHTML = questions[qNum].answers[3].ans4;
+			//a4.innerHTML = questions[qNum].answers[0].ans4;
 		}
 		
