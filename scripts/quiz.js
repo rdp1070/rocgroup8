@@ -2,7 +2,7 @@
 		
 		var influencees = [];
 		var questions = [];
-		
+		var answers = [];
 		var questionValue, a1, a2, a3, a4;
 		var currentNum = 0;
 		
@@ -22,7 +22,9 @@
 			a4 = document.querySelector("#a4");
 			
 			a1.onclick = a2.onclick = a3.onclick = a4.onclick = function(e){
-			changeQuestion(currentNum);
+				console.log(this.innerHTML);
+				answers.push(this.innerHTML);
+				changeQuestion(currentNum);
 			};
 
 			//changeQuestion(1);	
@@ -44,9 +46,9 @@
 					
 					var influencee = allInfluencees[i]; 
 					
-					console.log(influencee.artist);
-					console.log(influencee.genre);
-					console.log(influencee.influencers);
+					//console.log(influencee.artist);
+					//console.log(influencee.genre);
+					//console.log(influencee.influencers);
 				} 
 			}
 			var url = "scripts/json/tempArtists.json";
@@ -69,8 +71,8 @@
 					
 					var question = allQuestions[i]; 
 					
-					console.log(questions[i].txt);
-					console.log(questions[i].answers);
+					//console.log(questions[i].txt);
+					//console.log(questions[i].answers);
 				} 
 				//Initialize first question
 				changeQuestion(0);
@@ -95,7 +97,39 @@
 				setArtist();
 			}
 		}
-		
-		function setArtist(){
 
-		}
+
+		/*
+		* Compare the artists genres and influences to the answers
+		*/
+		function setArtist() {
+			// check to make sure the influencees are populated
+			// and that the answers have been seleceted. 
+			if (influencees.length > 0 && answers.length > 0) {
+				for (var i = 0; i < influencees.length; i++) {
+					influencees[i].score = 0;
+					for (var j = 0; j < answers.length; j++) {
+
+						if (influencees[i].genre == answers[j]){
+							influencees[i].score++;
+						}	
+						else if (influencees[i].influencers == answers[j]) {
+							influencees[i].score++;
+						}
+					}// end answers loop
+				}// end influencees loop
+			}// end if 
+
+			// check each artist, if the artist has a higher score
+			// than the current artist up for selection.
+			var cur_artist = influencees[0];
+			for (var x = 0; x < influencees.length; x++) {
+				if (influencees[x].score > cur_artist.score) {
+					cur_artist = influencees[x];
+				}
+			}
+
+			// print out the current artist in the console.
+			console.log(cur_artist.artist);
+
+		}	
