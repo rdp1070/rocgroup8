@@ -1,9 +1,23 @@
 		"use strict";
-		window.onload = loadInfluences;
+		window.onload = init;
 		
 		var influencees = [];
 		var questions = [];
+		var questionValue, a1, a2, a3, a4;
 
+		function init() {
+			loadInfluences();
+			loadQuestions();
+			
+			questionValue = document.querySelector("#questionTitle");
+			a1 = document.querySelector("#a1");
+			a2 = document.querySelector("#a2");
+			a3 = document.querySelector("#a3");
+			a4 = document.querySelector("#a4");
+
+			//changeQuestion(1);	
+		}
+		
 		/*
 		* Load in the influences from and external JSON file
 		*/
@@ -47,9 +61,20 @@
 					console.log(questions[i].txt);
 					console.log(questions[i].answers);
 				} 
+				//Initialize first question
+				changeQuestion(0);
 			}
 			var url = "scripts/json/questions.json";
 			xhr.open('GET',url,true);
 			xhr.send();
 
 		}
+		
+		function changeQuestion(qNum){
+			questionValue.innerHTML = questions[qNum].txt;
+			a1.innerHTML = questions[qNum].answers[0].ans1;
+			a2.innerHTML = questions[qNum].answers[0].ans2;
+			a3.innerHTML = questions[qNum].answers[0].ans3;
+			//a4.innerHTML = questions[qNum].answers[3].ans4;
+		}
+		
