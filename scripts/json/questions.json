@@ -1,18 +1,18 @@
 {"questions": [{
 	"txt": "Which of these interest you most?",
 	"answers": [
-		{"txt": "ans1"},
-		{"txt": "ans2"},
-		{"txt": "ans3"},
-		{"txt": "ans4"}
+		{"txt": "Pop"},
+		{"txt": "Rock"},
+		{"txt": "Jazz"},
+		{"txt": "Rap"}
 	]	
 },
 {
 	"txt": "Which of these interest you most?",
 	"answers": [
-		{"txt": "ans1"},
-		{"txt": "ans2"},
-		{"txt": "ans3"},
-		{"txt": "ans4"}
+		{"txt": "Pop"},
+		{"txt": "Rock"},
+		{"txt": "Rap"},
+		{"txt": "Jazz"}
 	]	
 }]}
