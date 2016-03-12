@@ -81,9 +81,10 @@
 		
 		function changeQuestion(qNum){
 			questionValue.innerHTML = questions[qNum].txt;
-			a1.innerHTML = questions[qNum].answers[0].ans1;
-			a2.innerHTML = questions[qNum].answers[0].ans2;
-			a3.innerHTML = questions[qNum].answers[0].ans3;
-			//a4.innerHTML = questions[qNum].answers[0].ans4;
+
+			a1.innerHTML = questions[qNum].answers[0].txt;
+			a2.innerHTML = questions[qNum].answers[1].txt;
+			a3.innerHTML = questions[qNum].answers[2].txt;
+			a4.innerHTML = questions[qNum].answers[3].txt;
 		}
 		
