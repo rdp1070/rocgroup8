@@ -5,11 +5,23 @@
     <title>title</title>
     <link rel="stylesheet" href="styles/style.css">
     <title>Rocpocalypse Project</title>
-   	<script src="quiz.js"></script>
+   	<script src="scripts/era1.js"></script>
+    <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
   </head>
   <body>
     <!-- page content -->
-    <section id="content"></section>
-    <p> ERA 2 CONTENT </p>
+    <section id="content">
+      
+    </section>
+    <div id="state">
+        <button id="a1">Taylor Swift</button>
+        <button id="a2">Kendrick Lamar</button>
+        <button id="a3">Drake</button>
+    </div>
+    <button id="forward">Move up</button>
+    <button id="reset">Reset</button>
   </body>
+  <script>
+    window.onload = init();
+  </script>
 </html>

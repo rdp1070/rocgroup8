@@ -1,15 +1,21 @@
 "use strict"
 
 // the active variable is wether or not the era station has a totem
-var active;;
+var active;
 // content is the div tagged ID on the html page
 var content;
+// state will change as app moves forward
+var state;
 // html is the html that will be added to the page
 var html;
+// setting button
+var fwdButton, resetButton;
+// variables for the comparison artists
+var a1, a2, a3;
 
 // A string with the artist from the user. 
 var user = {
-	artist: "",
+	artist: "Kanye West",
 	rfid: ""
 }; 
 
@@ -22,9 +28,33 @@ function init() {
 	active = false;
 	html = "";
 	content = document.querySelector("#content");
+	state = document.querySelector("#state");
+	
+	//Set up hidden buttons
+	state.style.display="none";
+	
+	//set up button
+	fwdButton = document.querySelector("#forward");
+	fwdButton.onclick = switchState;
+	
+	//will be replaced by totem functions
+	resetButton = document.querySelector("#reset");
+	resetButton.onclick = init;
+	
+	//set up artist buttons
+	a1 = document.querySelector("#a1");
+	a1.onclick = setComparison;
+	a2 = document.querySelector("#a2");
+	a2.onclick = setComparison;
+	a3 = document.querySelector("#a3");
+	a3.onclick = setComparison;
+	
 	window.requestAnimationFrame(update);
 	getUser();
 	fetchArtists();
+	
+	//set this at the end to re-display
+	fwdButton.style.display="block";
 }
 
 
@@ -32,9 +62,22 @@ function init() {
 /*
 *	Grab artists from an external file
 *	returns an array of Artists
+*   returns three comparison artists
 */
 function fetchArtists() {
-	html += "<h1>test artist</h1>"
+	//Once RFID is set up this will user user.artist
+	html += "<h1>" + user.artist + " is your artist.</h1>";
+}
+
+/*
+*   Sets up the users artist variable
+*   moves state forward
+*/
+function setComparison() {
+	html = "<h1>Compare " + user.artist + " with " + this.innerHTML + "</h1>";
+	
+	//hide the buttons
+	state.style.display="none";
 }
 
 
@@ -47,7 +90,7 @@ function update() {
 		content.innerHTML = html;
 		// if code here
 	} else {
-		content.innerHTML = "<h1> This is the test inactive page </h1><p> some more stuff goes here </p>";
+		content.innerHTML = "<h1> Place your totem </h1><p> Click below </p>";
 		// else code here
 	}
 
@@ -69,4 +112,7 @@ function getUser() {
 */
 function switchState() {
 	active = !active;
+	
+	state.style.display="block";
+	this.style.display="none";
 }
