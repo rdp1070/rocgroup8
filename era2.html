@@ -10,16 +10,46 @@
   </head>
   <body>
     <!-- page content -->
+    <header class="clearfix">
     <section id="content">
-      
     </section>
+      
     <div id="state">
         <button id="a1">Taylor Swift</button>
         <button id="a2">Kendrick Lamar</button>
         <button id="a3">Drake</button>
     </div>
-    <button id="forward">Move up</button>
-    <button id="reset">Reset</button>
+    </header>
+      
+    <section id="leftCol">
+        Artist Title
+        <div class="track">Thing</div>
+        <div class="track">Thing</div>
+        <div class="track">Thing</div>
+        <div class="track">Thing</div>
+    </section>
+      
+    <section id="rightCol">
+        <div class="info">Comparison Track</div>
+        <div class="info clearfix">
+            <div class="sub">Stuff</div>
+            <div class="sub">Stuff</div>
+            <div class="sub">Stuff</div>
+        </div>
+        <div class="info clearfix">
+            <div class="sub" style="width:40%">Stuff</div>
+            <div class="sub" style="width:49%">Stuff</div>
+        </div>
+        <div class="info clearfix">
+            <div class="sub" style="width:49%">Stuff</div>
+            <div class="sub" style="width:40%">Stuff</div>
+        </div>
+    </section>
+      
+    <div id="tempButton">
+      <button id="forward">Move up</button>
+      <button id="reset">Reset</button>
+    </div>
   </body>
   <script>
     window.onload = init();

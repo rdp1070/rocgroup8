@@ -5,7 +5,8 @@ var active;
 // content is the div tagged ID on the html page
 var content;
 // state will change as app moves forward
-var state;
+//Cols will appear with info when totem is used
+var state, leftCol, rightCol;
 // html is the html that will be added to the page
 var html;
 // setting button
@@ -15,7 +16,7 @@ var a1, a2, a3;
 
 // A string with the artist from the user. 
 var user = {
-	artist: "Kanye West",
+	artist: "Bruno Mars",
 	rfid: ""
 }; 
 
@@ -29,9 +30,13 @@ function init() {
 	html = "";
 	content = document.querySelector("#content");
 	state = document.querySelector("#state");
+    leftCol = document.querySelector("#leftCol");
+    rightCol = document.querySelector("#rightCol");
 	
 	//Set up hidden buttons
 	state.style.display="none";
+    leftCol.style.display="none";
+    rightCol.style.display="none";
 	
 	//set up button
 	fwdButton = document.querySelector("#forward");
@@ -77,7 +82,7 @@ function setComparison() {
 	html = "<h1>Compare " + user.artist + " with " + this.innerHTML + "</h1>";
 	
 	//hide the buttons
-	state.style.display="none";
+	//state.style.display="none";
 }
 
 
@@ -114,5 +119,7 @@ function switchState() {
 	active = !active;
 	
 	state.style.display="block";
+    leftCol.style.display="block";
+    rightCol.style.display="block";
 	this.style.display="none";
 }
