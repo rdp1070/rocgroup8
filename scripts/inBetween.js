@@ -1,7 +1,9 @@
 window.onload = init;
 		var canvas, canvas2, ctx, videoElement, w, h;
+		var dataArray = ["","","","","","","",""];
 		var oldData = null;
 		var detected = false;
+		var trnsData = [];
 		
 		function init(){
 			canvas = document.getElementById('canvas'); 
@@ -35,7 +37,12 @@ window.onload = init;
 			); 
 		};
 			
-			
+			// every x milliseconds chunk 1/4th the data 
+			this.setInterval(function(){ 
+				console.log("trnsData.length : " + trnsData.length);
+				trnsData = trnsData.slice(trnsData.length/10,trnsData.length);
+			}, 100); // end setInterval
+
 			drawEffect();
 		}
 	
@@ -52,13 +59,12 @@ window.onload = init;
 			var length = data.length;
 			var width = imageData.width;
 			
-			
-			
 		
 			if (oldData != null){
-				data = motionDetection(data,oldData);
-				oldData = data;
-				//blackOut(imageData, ctx2);
+				// detect the motion by comparing the data to the oldData
+				data = motionDetection(data,oldData, trnsData);
+				// blackout the new data.
+				data = blackOut(imageData, trnsData, ctx2);
 			} else {
 				//oldData = data;
 			}	
@@ -69,25 +75,20 @@ window.onload = init;
 			requestAnimationFrame(drawEffect);	
 		}
 		
-		function motionDetection(data,oldData){
-			var threshold = 3;
+		function motionDetection(data,oldData, trnsData){
+			var threshold = 7;
+			// for each pixel in height
 			for( var y = 0 ; y < h; y++ ) {
+				// for each pixel in widht
 				for( var x = 0 ; x < w; x++ ) {
-				
 					var indexOld = (y * w + x) * 4, oldr = oldData[indexOld], oldg = oldData[indexOld+1], oldb = oldData[indexOld+2], olda = oldData[indexOld+3];
 					var indexNew = (y * w + x) * 4, r = data[indexNew], g = data[indexNew+1], b = data[indexNew+2], a = data[indexNew+3];
 					if (oldr > r - threshold || oldg > g - threshold || oldb > b -threshold) {
-						/*
-						data[indexNew] = 0;
-						data[indexNew+1] = 0; 
-						data[indexNew+2] = 0; 
-						data[indexNew+3] = 255; 
-						detected = true;*/
+						
 					} else {
-						data[indexNew] = 255; 
-						data[indexNew+1] = 0; 
-						data[indexNew+2] = 0; 
-						data[indexNew+3] = 0;
+						// if the red green or blue break the threshold add that number to the array of 
+						// data that has transparent pixels.
+						trnsData.push(indexNew);
 						
 					}
 					
@@ -99,28 +100,18 @@ window.onload = init;
 		/*
 		* Get every pixel that isn't transparent and turn it black
 		*/
-		function blackOut(ImageData,ctx){
+		function blackOut(ImageData, trnsData, ctx){
 			var data = ImageData.data;
-			for( var y = 0 ; y < h; y++ ) {
-				for( var x = 0 ; x < w; x++ ) {
-				
-					var indexNew = (y * w + x) * 4, r = data[indexNew], g = data[indexNew+1], b = data[indexNew+2], a = data[indexNew+3];
-					// unless the pixel is transparent, black it out.
-					if (r == 0  &&  g == 0  && b == 0) {
-						data[indexNew] = 0;
-						data[indexNew+1] = 0; 
-						data[indexNew+2] = 0; 
-						data[indexNew+3] = 0; 
-					} else {
-						data[indexNew] = 0; 
-						data[indexNew+1] = 0; 
-						data[indexNew+2] = 0; 
-						data[indexNew+3] = 255;
-						
-					}
-					
-				} // end for x
-			} // end for y
-			ctx.putImageData(ImageData,0,0);
+			// color the whole screen black
+			ctx2.fillStyle = "black";
+			ctx2.fillRect(0,0,w,h);
+			
+			// for each trnsData point change that data to transparent.
+			for (var j = 0; j < trnsData.length; j++){
+				data[trnsData[j]] = 0;
+				data[trnsData[j]+1] = 0;
+				data[trnsData[j]+2] = 0;
+				data[trnsData[j]+3] = 0;
+			}
+			ctx2.putImageData(ImageData,0,0);
 		}
-		
