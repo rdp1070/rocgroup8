@@ -3,9 +3,11 @@ html{
 }
 
 header{
-    /**
-    Do you want this fixed position?
-    **/
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 2;
     margin-bottom: 2%;
     padding: 1em;
     background-color: cornflowerblue
@@ -17,9 +19,13 @@ header{
 
 #state{
     float: right;
+    margin-right: 2%;
 }
 
 #leftCol{
+    position: fixed;
+    z-index: 2;
+    top: 124px;
 	float: left;
     width: 30%;
     padding: 1em;
@@ -27,6 +33,9 @@ header{
 }
 
 #rightCol{
+    position: relative;
+    z-index: 1;
+    top: 116px;;
     float: right;
     width: 60%;
     padding: 1em;
