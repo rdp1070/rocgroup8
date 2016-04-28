@@ -1,0 +1,14 @@
+{
+  "artists": [{
+    "id": "Bruno_Mars",
+    "artist": "Bruno Mars"
+  }, 
+  {
+    "id": "Beyonce",
+    "artist": "Beyonce"
+  }, 
+  {
+    "id": "Foo_Fighters",
+    "artist": "Foo Fighters"
+  }]
+}

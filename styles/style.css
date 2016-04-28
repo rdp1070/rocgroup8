@@ -1,94 +1,94 @@
-html{
-    background-color: #333539;
-    font-family: 'Open Sans', sans-serif;
+html {
+  background-color: #333539;
+  font-family: 'Open Sans', sans-serif;
 }
 
-header{
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    z-index: 2;
-    margin-bottom: 2%;
-    padding: 1em;
-    color: #fffcf0;
-    background-color: #26292c;
+header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 2;
+  margin-bottom: 2%;
+  padding: 1em;
+  color: #fffcf0;
+  background-color: #26292c;
 }
 
 .button{
-    height: 90px;
+  height: 90px;
 }
 
 #content{
-    /*text-align: center;*/
-    float: left;
+  /*text-align: center;*/
+  float: left;
 }
 
 #state{
-    float: right;
-    margin-right: 3.7%;
+  float: right;
+  margin-right: 3.7%;
 }
 
 #leftCol{
-    position: fixed;
-    z-index: 2;
-    top: 124px;
-	float: left;
-    width: 30%;
-    padding: 1em;
-    color: #fffcf0;
-    /*background-color: #474b55;*/
+  position: fixed;
+  z-index: 2;
+  top: 124px;
+  float: left;
+  width: 30%;
+  padding: 1em;
+  color: #fffcf0;
+  /*background-color: #474b55;*/
 }
 
 #rightCol{
-    position: relative;
-    z-index: 1;
-    top: 116px;;
-    float: right;
-    width: 65%;
-    padding: 1em;
-    color: #fffcf0;
-    /*background-color: #474b55;*/
+  position: relative;
+  z-index: 1;
+  top: 116px;;
+  float: right;
+  width: 65%;
+  padding: 1em;
+  color: #fffcf0;
+  /*background-color: #474b55;*/
 }
 
 #tempButton{
 	clear: both;
-    position: relative;
-    top: 200px;
+  position: relative;
+  top: 200px;
 }
 
 .trackPicture{
-    width: 100%;
-    margin: 0px;
+  width: 100%;
+  margin: 0px;
 }
 
 .track{
-    margin: 10px 10px 10px 0px;
-    padding: 1em;
-    background-color: #474b55;
+  margin: 10px 10px 10px 0px;
+  padding: 1em;
+  background-color: #474b55;
 }
 
 .info{
-    position: relative;
-    margin: 10px;
-    clear: both;
+  position: relative;
+  margin: 10px;
+  clear: both;
 }
 
 .sub{
-    position: relative;
-    width: 28%;
-    margin: 0% 1% 0% 0%;
-    padding-bottom: 2%;
-    float: left;
-    background-color: #474b55;
+  position: relative;
+  width: 28%;
+  margin: 0% 1% 0% 0%;
+  padding-bottom: 2%;
+  float: left;
+  background-color: #474b55;
 }
 
 .clearfix:before,
 .clearfix:after{
-    content: " ";
-    display: table;
+  content: " ";
+  display: table;
 }
 
 .clearfix:after{
-    clear:both;
+  clear:both;
 }
