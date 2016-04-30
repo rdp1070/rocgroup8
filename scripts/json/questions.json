@@ -3,6 +3,8 @@
 	"answers": [
 		{"txt": "Pop"},
 		{"txt": "Rock"},
+        {"txt": "Rock"},
+        {"txt": "Rock"},
 		{"txt": "Jazz"},
 		{"txt": "Rap"}
 	]	
@@ -12,7 +14,6 @@
 	"answers": [
 		{"txt": "Pop"},
 		{"txt": "Rock"},
-		{"txt": "Rap"},
 		{"txt": "Jazz"}
 	]	
 },
