@@ -71,8 +71,8 @@ function fetchArtists(id) {
 *   moves state forward
 */
 function setComparison() {
-	html = "<h1>Compare " + userArtist + " with " + this.alt + "</h1>";
-	
+	content.innerHTML = "<h1>Compare " + userArtist + " with " + this.alt + "</h1>";
+	console.log("Hit" + this);
 	//hide the buttons
 	//state.style.display="none";
 }
