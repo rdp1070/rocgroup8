@@ -9,29 +9,27 @@
    	<script src="scripts/inBetween.js"></script>
     <style type="text/css">
     body{
-      font-family: verdana, sans-serif;
+        font-family: verdana, sans-serif;
+        margin : 0px;
+        overflow: hidden;
     }
     canvas{
-      width: 640px;
-      height: 480px;
+        height: 100vh;
+        width: 100vw;
       position:absolute;
-      top:5px;
-      left: 5px;
+
     }
     
     video{
-      width: 640px;
-      height: 480px;
-      position:absolute;
-      top:5px;
-      left: 5px;
+      
+        height: 100vh;
+        width: 100vw;
+        position:absolute;
     }
     iframe{
-      width: 640px;
-      height: 480px;
-      position:absolute;
-      top:5px;
-      left: 5px;
+        height: 100vh;
+        width: 100vw;
+        position:absolute;
     }
   </style>
   </head>
@@ -44,7 +42,7 @@
     <video autoplay>
       Go get an HTML5 Browser!
     </video>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/vefJAtG-ZKI?autoplay=1" frameborder="0" allowfullscreen></iframe>
+    <iframe width="100vw" height="100vh" src="https://www.youtube.com/embed/vefJAtG-ZKI?autoplay=1" frameborder="0" allowfullscreen></iframe>
      <canvas id = "canvas2">
       Really, go get an HTML5 Browser!
     </canvas>
