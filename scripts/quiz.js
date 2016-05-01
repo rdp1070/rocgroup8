@@ -78,25 +78,23 @@ function changeQuestion(qNum) {
         //console.log(questions[qNum].answers.length);
         
         for (i = 0; i < questions[qNum].answers.length; i += 1) {
-            answers_div.innerHTML += "<button class=\"answer\" id = \"a" + i + "\">" + questions[qNum].answers[i].txt + "</button>";
+            // make a button with an image tag inside of it. 
+            // the image should have a source that is stored in the json.
+            answers_div.innerHTML += "<input type=\"image\" \"class=\"answer\" id = \"" + i + "\" onclick=\"buttonClick()\" src=\""  +  questions[qNum].answers[i].img + "\"></input>";
         }
-       /* answers_div.querySelectorAll(".answer").onclick = function (e) {
-            currentNum += 1;
-            changeQuestion(currentNum);
-        };*/
-         // set up the onclick function for all button.answers 
-        $(document).ready(function () {
-            $('button.answer').click(function () {
-                currentNum += 1;
-                changeQuestion(currentNum);
-            });
-        });
         
     } else {
+        // this calls the dummy function that doesn't really do anything rn.
         setArtist();
     }
 }
 
+// click the button
+function buttonClick() {
+    'use strict';
+    currentNum += 1;
+    changeQuestion(currentNum);
+}
 
 /*
 * Enter Animation

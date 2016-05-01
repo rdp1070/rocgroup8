@@ -1,28 +1,25 @@
 {"questions": [{
-	"txt": "Which of these interest you most? First",
+	"txt": "Pick a Genre",
 	"answers": [
-		{"txt": "Pop"},
-		{"txt": "Rock"},
-        {"txt": "Rock"},
-        {"txt": "Rock"},
-		{"txt": "Jazz"},
-		{"txt": "Rap"}
+		{"txt": "Hip Hop", "img": "media/quiz/hiphop.png"},
+		{"txt": "Pop", "img": "media/quiz/pop.png"},
+        {"txt": "Rock" , "img": "media/quiz/rock.png"}
 	]	
 },
 {
-	"txt": "Which of these interest you most? Second",
+	"txt": "Pick a Feeling",
 	"answers": [
-		{"txt": "Pop"},
-		{"txt": "Rock"},
-		{"txt": "Jazz"}
+		{"txt": "Nostalgia", "img": "media/quiz/nostalgia.png"},
+		{"txt": "Bubbly", "img": "media/quiz/bubbly.png"},
+		{"txt": "Mellow" , "img": "media/quiz/mellow.png"}
 	]	
 },
 {
-	"txt": "Which of these interest you most? Third",
+	"txt": "Pick a Color",
 	"answers": [
-		{"txt": "Pop"},
-		{"txt": "Rock"},
-		{"txt": "Rap"},
-		{"txt": "Jazz"}
+		{"txt": "Pop" , "img": "media/quiz/nostalgia.png"},
+		{"txt": "Rock" , "img": "media/quiz/nostalgia.png"},
+		{"txt": "Rap" , "img": "media/quiz/nostalgia.png"},
+		{"txt": "Jazz" , "img": "media/quiz/nostalgia.png"}
 	]	
 }]}
