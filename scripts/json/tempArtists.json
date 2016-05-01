@@ -1,16 +1,13 @@
 {"influencees": [{
-	"artist": "Kanye West",
-	"genre": "Rap",
-	"influencers": "Jazz"	
+	"artist": "Bruno",
+	"genre": "Hip Hop"	
 },
 {
-	"artist": "Taylor Swift",
-	"genre": "Pop",
-	"influencers": "Rock"	
+	"artist": "Beyonce",
+	"genre": "Pop"	
 },
 {
-	"artist": "Adele",
-	"genre": "Pop",
-	"influencers": "Rock"	
+	"artist": "Foo Fighters",
+	"genre": "Rock"	
 }
 ]}

@@ -17,9 +17,9 @@
 {
 	"txt": "Pick a Color",
 	"answers": [
-		{"txt": "Pop" , "img": "media/quiz/nostalgia.png"},
-		{"txt": "Rock" , "img": "media/quiz/nostalgia.png"},
-		{"txt": "Rap" , "img": "media/quiz/nostalgia.png"},
-		{"txt": "Jazz" , "img": "media/quiz/nostalgia.png"}
+		{"txt": "black" , "img": "media/quiz/nostalgia.png"},
+		{"txt": "orange" , "img": "media/quiz/nostalgia.png"},
+		{"txt": "green" , "img": "media/quiz/nostalgia.png"},
+		{"txt": "blue" , "img": "media/quiz/nostalgia.png"}
 	]	
 }]}
