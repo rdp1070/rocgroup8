@@ -72,15 +72,28 @@ function setArtist() {
 function changeQuestion(qNum) {
     'use strict';
     answers_div.innerHTML = "";
+    if(qNum < 0){
+        qNum = 0;
+        currentNum = 0;
+    }
     if (questions[qNum]) {
         questionValue.innerHTML = questions[qNum].txt;
-        var i;
+        var i, div_holder;
         //console.log(questions[qNum].answers.length);
         
         for (i = 0; i < questions[qNum].answers.length; i += 1) {
             // make a button with an image tag inside of it. 
             // the image should have a source that is stored in the json.
-            answers_div.innerHTML += "<input type=\"image\" \"class=\"answer\" id = \"" + i + "\" onclick=\"buttonClick()\" src=\""  +  questions[qNum].answers[i].img + "\"></input>";
+            answers_div.innerHTML += "<input type=\"image\" \"class=\"answer\" id = \"" + i + "\" onclick=\"goForward()\" src=\""  +  questions[qNum].answers[i].img + "\"></input>";
+        }
+        
+        div_holder = document.querySelectorAll("input");
+        for (var x = 0; x < div_holder.length; x++) {
+            if (x%2 == 1){
+                div_holder[x].setAttribute("top", "-100%");
+            } else {
+                div_holder[x].setAttribute("top", "+100%");
+            }
         }
         
     } else {
@@ -90,9 +103,17 @@ function changeQuestion(qNum) {
 }
 
 // click the button
-function buttonClick() {
+function goForward() {
     'use strict';
     currentNum += 1;
+    changeQuestion(currentNum);
+}
+
+
+// go back one question
+function goBack(){
+    'use strict';
+    currentNum -= 1;
     changeQuestion(currentNum);
 }
 
