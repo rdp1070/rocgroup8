@@ -3,6 +3,7 @@ var questions = [];
 var answers = [];
 var questionValue, answers_div;
 var currentNum = 0;
+var piName;
 
 /*jslint browser: true*/
 /*global $, jQuery, alert*/
@@ -56,6 +57,19 @@ function setArtist() {
       data.currentArtist = curArt;
       console.log(data.currentArtist); 
     });
+    
+    console.log(cur_artist.id);
+    
+    $.ajax({
+      data: 'artist=' + cur_artist.id + '&pi=' + piName,
+      url: 'scripts/loadArtist.php', 
+      method: 'POST',
+      success: function(msg) {
+        console.log(msg);
+      }
+    });
+    
+    console.log("select artist complete");
 }
 
 
@@ -146,6 +160,10 @@ function loadQuestions() {
     xhr.open('GET', url, true);
     xhr.send();
 
+}
+
+function getPi(pi) {
+  piName = pi;
 }
 
 function init() {

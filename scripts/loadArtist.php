@@ -1,29 +1,36 @@
 <?php
 
-#Grab the pi from the URL
-#$pi = htmlspecialchars($_GET["pi"]);
-echo "running";
-
-#Query our quiz artist json file to get selected artist
-$file = file_get_contents('http://10.59.12.32/scripts/json/tempArtists.json');
-$json = json_decode($file, true);
-
-$cArtist = $json['currentArtist'];
+#Grab the artist and pi from the javascript
+$cArtist = $_POST['artist'];
 
 echo $cArtist;
 
+$piN = $_POST['pi'];
+
+echo $piN;
+
 #Variables to connect to MySQL Database
-$servername = "kmbhostevoke.rh.rit.edu";
+$servername = "kmbhostevoxe.rh.rit.edu";
 $username = "rock";
 $database = "rockbase";
 
 try {
+  //create connection
   $conn = new PDO("mysql:host=$servername;dbname=$database", $username);
   
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   echo "Connected successfully";
   
-  #$sql = "UPDATE `totems` SET `ARTIST` = 'Bruno_Mars' WHERE `totems`.`NAME` = $pi;";
+  $sql = "UPDATE `totems` SET `ARTIST` = '" . $cArtist . "' WHERE `NAME` = '" . $piN . "'";
+  
+  // Prepare statement
+  $stmt = $conn->prepare($sql);
+
+  // execute the query
+  $stmt->execute();
+
+  // echo a message to say the UPDATE succeeded
+  echo $stmt->rowCount() . " records UPDATED successfully";
   
 } catch (PDOException $e) {
   echo "Connection Failed: " . $e->getMessage();
