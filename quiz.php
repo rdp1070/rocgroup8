@@ -19,5 +19,8 @@
       <div id = "answers">
       </div>
       <button id = "back" onclick = "goBack()"> <img src="media/quiz/backarrow.png"></button>
+      <?php
+      #include loadArtist.php
+      ?>
   </body>
 </html>

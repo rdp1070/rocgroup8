@@ -46,6 +46,8 @@ function setArtist() {
     // print out the current artist in the console.
     // console.log(cur_artist.artist);
     answers_div.innerHTML = cur_artist.artist;
+    
+    console.log(cur_artist.artist);
 }
 
 
