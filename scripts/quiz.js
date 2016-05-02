@@ -48,6 +48,14 @@ function setArtist() {
     answers_div.innerHTML = cur_artist.artist;
     
     console.log(cur_artist.artist);
+    
+    $.getJSON("scripts/json/tempArtists.json", function(data){
+      //console.log(data);
+      var curArt = cur_artist.id;
+      
+      data.currentArtist = curArt;
+      console.log(data.currentArtist); 
+    });
 }
 
 

@@ -1,12 +1,16 @@
-{"influencees": [{
-	"artist": "Bruno",
-	"genre": "Hip Hop"	
-},
-{
-	"artist": "Beyonce",
+{"currentArtist": "",
+"influencees": [{
+  "id": "Bruno_Mars",
+	"artist": "Bruno Mars",
 	"genre": "Pop"	
 },
 {
+  "id": "Beyonce",
+	"artist": "Beyonce",
+	"genre": "Hip Hop"	
+},
+{
+  "id": "Foo_Fighter",
 	"artist": "Foo Fighters",
 	"genre": "Rock"	
 }
