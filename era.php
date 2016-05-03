@@ -19,13 +19,14 @@
       </section>
         
       <div id="state">
-          <img class="button" id="a1" alt="The Beatles" src="media/the_beatles.jpg">
-          <img class="button" id="a2" alt="Michael Jackson" src="media/michael_jackson.jpg">
-          <img class="button" id="a3" alt="Elvis" src="media/elvis.jpg">
+          <img class="button" id="a1" alt="The Beatles" src="media/era/the_beatles.jpg">
+          <img class="button" id="a2" alt="Michael Jackson" src="media/era/michael_jackson.jpg">
+          <img class="button" id="a3" alt="Elvis" src="media/era/elvis.jpg">
       </div>
     </header>
       
     <section id="leftCol">
+        <img src="media/era/bruno.png" width="100%">
         <div id="artistName">
         </div>
         <div class="track">When I Was Your Man<p><sub>Unorthodox Jukebox</sub></p></div>
@@ -37,17 +38,17 @@
     <section id="rightCol">
       <div class="info">Comparison Track</div>
       <div class="info clearfix">
-          <div class="sub"><img class="trackPicture" src="media/the_beatles.jpg"></div>
-          <div class="sub">Stuff</div>
-          <div class="sub">Stuff</div>
+          <div class="sub"><img class="trackPicture" src="media/era/the_beatles.jpg"><div class="subtext">Album Text</div></div>
+          <div class="sub"><img class="trackPicture" src="media/era/Beatles/Beatles08.jpg"><div class="subtext">Album Text</div></div>
+          <div class="sub"><img class="trackPicture" src="media/era/Beatles/Beatles04.jpg"><div class="subtext">Album Text</div></div>
       </div>
       <div class="info clearfix">
-          <div class="sub" style="width:40%">Stuff</div>
-          <div class="sub" style="width:49%">Stuff</div>
+          <div class="sub" style="width:40%"><img class="trackPicture" src="media/era/Beatles/Beatles09.jpg"><div class="subtext">Album Text</div></div>
+          <div class="sub" style="width:49%"><img class="trackPicture" src="media/era/Beatles/Beatles00.jpg"><div class="subtext">Album Text</div></div>
       </div>
       <div class="info clearfix">
-          <div class="sub" style="width:49%">Stuff</div>
-          <div class="sub" style="width:40%">Stuff</div>
+          <div class="sub" style="width:49%"><div class="subtext">A quote from the artist.</div></div>
+          <div class="sub" style="width:40%"><img class="trackPicture" src="media/era/Beatles/Beatles11.jpg"><div class="subtext">Album Text</div></div>
       </div>
     </section>
   </body>

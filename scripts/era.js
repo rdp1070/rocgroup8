@@ -34,6 +34,10 @@ function init() {
 	a2.onclick = setComparison;
 	a3 = document.querySelector("#a3");
 	a3.onclick = setComparison;
+    
+    $(window).scroll(function(){
+    $("#rightCol").css("opacity", 1 - $(window).scrollTop() / 250);
+    });
 }
 
 /*
