@@ -17,6 +17,13 @@ header {
 
 .button{
   height: 90px;
+  transition: all .2s ease-in-out;
+}
+
+.button:focus{
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
 }
 
 #content{
@@ -63,9 +70,15 @@ header {
 }
 
 .track{
-  margin: 10px 10px 10px 0px;
-  padding: 1em;
+  margin: 10px 10px 0px 0px;
+  padding: 1.5em 1em .1em 1em;
   background-color: #474b55;
+  line-height: 1px;
+}
+
+sub{
+  margin: 0px;
+  color: grey;
 }
 
 .info{

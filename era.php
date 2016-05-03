@@ -26,11 +26,12 @@
     </header>
       
     <section id="leftCol">
-        Artist Title
-        <div class="track">Thing</div>
-        <div class="track">Thing</div>
-        <div class="track">Thing</div>
-        <div class="track">Thing</div>
+        <div id="artistName">
+        </div>
+        <div class="track">When I Was Your Man<p><sub>Unorthodox Jukebox</sub></p></div>
+        <div class="track">Treaure<p><sub>Unorthodox Jukebox</sub></p></div>
+        <div class="track">Locked Out Of Heaven<p><sub>Unorthodox Jukebox</sub></p></div>
+        <div class="track">Just the Way You Are<p><sub>Doo-Wops & Hooligans</sub></p></div>
     </section>
       
     <section id="rightCol">

@@ -4,7 +4,7 @@
 var content;
 // state will change as app moves forward
 //Cols will appear with info when totem is used
-var state, leftCol, rightCol;
+var state, leftCol, rightCol, artistName;
 
 // html is the html that will be added to the page
 var html;
@@ -23,8 +23,9 @@ function init() {
 	html = "";
 	content = document.querySelector("#content");
 	state = document.querySelector("#state");
-  leftCol = document.querySelector("#leftCol");
-  rightCol = document.querySelector("#rightCol");
+    leftCol = document.querySelector("#leftCol");
+    rightCol = document.querySelector("#rightCol");
+	artistName = document.querySelector("#artistName");
 	
 	//set up artist buttons
 	a1 = document.querySelector("#a1");
@@ -33,7 +34,6 @@ function init() {
 	a2.onclick = setComparison;
 	a3 = document.querySelector("#a3");
 	a3.onclick = setComparison;
-	
 }
 
 /*
@@ -72,7 +72,15 @@ function fetchArtists(id) {
 */
 function setComparison() {
 	content.innerHTML = "<h1>Compare " + userArtist + " with " + this.alt + "</h1>";
-	console.log("Hit" + this);
+	artistName.innerHTML = userArtist;
+	
+	//Make all other buttons regular size
+	a1.style="transform: scale(1.0)";
+	a2.style="transform: scale(1.0)";
+	a3.style="transform: scale(1.0)";
+	
+	this.style="transform: scale(1.3); margin-left: 15px; margin-right: 15px";
+	//this.style="margin: 10px";
 	//hide the buttons
 	//state.style.display="none";
 }
