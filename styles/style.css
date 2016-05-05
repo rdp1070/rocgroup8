@@ -1,3 +1,8 @@
+@font-face{
+  font-family: AdamCG;
+  src: url("../media/fonts/ADAM.CG PRO.otf");
+}
+
 html {
   background-color: #333539;
   background-image: url("../media/era/top_gradient.png");
