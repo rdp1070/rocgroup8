@@ -11,6 +11,7 @@
 	
   </head>
   <body>
+      <button id = "back" onclick = "goBack()"> <img src="media/quiz/backarrow.png"></button>
       <?php 
         #get pi from url
         $pi = htmlspecialchars($_GET["pi"]);
@@ -23,7 +24,7 @@
       </div>
       <div id = "answers">
       </div>
-      <button id = "back" onclick = "goBack()"> <img src="media/quiz/backarrow.png"></button>
+      
       <script>
         //set pi variable and pass to javascript file
         var piID = '<?php echo $pi?>';

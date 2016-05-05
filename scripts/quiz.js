@@ -3,7 +3,7 @@ var questions = [];
 var answers = [];
 var questionValue, answers_div;
 var currentNum = 0;
-var piName;
+var piName, cur_artist;
 
 /*jslint browser: true*/
 /*global $, jQuery, alert*/
@@ -37,7 +37,7 @@ function setArtist() {
     
     // if the genre they picked is the same as the artist genre
     // set that artist to be the current artist. 
-    var x, cur_artist;
+    var x;
     for (x = 0; x < influencees.length; x += 1) {
         if (influencees[x].genre === answers[0]) {
             cur_artist = influencees[x];
@@ -46,27 +46,18 @@ function setArtist() {
     
     // print out the current artist in the console.
     // console.log(cur_artist.artist);
-    answers_div.innerHTML = cur_artist.artist;
+    answers_div.innerHTML = cur_artist.artist + "<div id=\"syncButton\" onclick =\"sync()\"><img src=\"media/quiz/sync.png\"></div>";
     
-    console.log(cur_artist.artist);
-    
-    $.getJSON("scripts/json/tempArtists.json", function(data){
-      //console.log(data);
-      var curArt = cur_artist.id;
-      
-      data.currentArtist = curArt;
-      console.log(data.currentArtist); 
-    });
-    
-    console.log(cur_artist.id);
+    //console.log(cur_artist.artist);
+    //console.log(cur_artist.id);
     
     $.ajax({
-      data: 'artist=' + cur_artist.id + '&pi=' + piName,
-      url: 'scripts/loadArtist.php', 
-      method: 'POST',
-      success: function(msg) {
-        console.log(msg);
-      }
+        data: 'artist=' + cur_artist.id + '&pi=' + piName,
+        url: 'scripts/loadArtist.php',
+        method: 'POST',
+        success: function (msg) {
+            console.log(msg);
+        }
     });
     
     console.log("select artist complete");
@@ -91,7 +82,7 @@ function changeQuestion(qNum) {
         for (i = 0; i < questions[qNum].answers.length; i += 1) {
             // make a button with an image tag inside of it. 
             // the image should have a source that is stored in the json.
-            answers_div.innerHTML += "<input type=\"image\" \"class=\"answer\" onclick=\"goForward(" + i + ")\" src=\""  +  questions[qNum].answers[i].img + "\"></input>";
+            answers_div.innerHTML += "<div class=\"answer\" onclick=\"goForward(" + i + ")\" style=\" background-image: url("  +  questions[qNum].answers[i].img + ")\"></div>";
         }
         
         div_holder = document.querySelectorAll("input");
@@ -124,6 +115,18 @@ function goBack() {
     'use strict';
     currentNum -= 1;
     changeQuestion(currentNum);
+}
+
+// sync the stuf{f
+function sync() {
+    'use strict';
+    $.getJSON("scripts/json/tempArtists.json", function (data) {
+        //console.log(data);
+        var curArt = cur_artist.id;
+      
+        data.currentArtist = curArt;
+        console.log(data.currentArtist);
+    });
 }
 
 /*
@@ -163,7 +166,8 @@ function loadQuestions() {
 }
 
 function getPi(pi) {
-  piName = pi;
+    'use strict';
+    piName = pi;
 }
 
 function init() {
