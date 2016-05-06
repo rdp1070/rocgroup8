@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+      <img src="./media/era/top_fade.png" id="fade">
   <head>
     <meta charset="utf-8">
     <title>title</title>
@@ -24,6 +25,7 @@
           <img class="button" id="a3" alt="Elvis" src="media/era/elvis.jpg">
       </div>
     </header>
+    
       
     <section id="leftCol">
         <img src="media/era/bruno.png" width="100%">

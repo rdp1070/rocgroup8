@@ -10,6 +10,15 @@ html {
   font-family: 'Open Sans', sans-serif;
 }
 
+#fade{
+  margin: -10px;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  position: fixed;
+  z-index: 2;
+}
+
 header {
   position: fixed;
   top: 0px;
@@ -17,7 +26,7 @@ header {
   width: 100%;
   z-index: 2;
   margin-bottom: 2%;
-  padding: 1em;
+  padding: 1em 0em 0em 0em;
   color: #fffcf0;
   
 }
@@ -35,32 +44,38 @@ header {
 
 #content{
   /*text-align: center;*/
+  font-family: AdamCG;
   float: left;
 }
 
 #state{
   float: right;
-  margin-right: 3.7%;
+  margin-right: 4%;
 }
 
 #leftCol{
+  font-family: AdamCG;
   position: fixed;
   z-index: 2;
   top: 124px;
   float: left;
   width: 30%;
   padding: 1em;
+  margin-left: 3%;
   color: #fffcf0;
   /*background-color: #474b55;*/
 }
 
 #rightCol{
+  font-family: AdamCG;
   position: relative;
+  display: table;
   z-index: 1;
-  top: 116px;;
+  top: 400px;
   float: right;
   width: 65%;
   padding: 1em;
+  margin-right: -4%;
   color: #fffcf0;
   /*background-color: #474b55;*/
 }
@@ -77,9 +92,11 @@ header {
 }
 
 .track{
+  font-family: 'Open Sans';
   margin: 10px 10px 0px 0px;
   padding: 1.5em 1em .1em 1em;
-  background-color: #474b55;
+  background-color: #292929;
+  box-shadow: 3px 3px 3px #000000;
   line-height: 1px;
 }
 
@@ -95,14 +112,17 @@ sub{
 }
 
 .sub{
+  display: table-cell;
   position: relative;
   width: 29.3%;
   margin: 0% 1% 0% 0%;
   padding-bottom: 2%;
   float: left;
   background-color: #474b55;
+  box-shadow: 3px 3px 3px #000000;
 }
 .subtext{
+    font-family: 'Open Sans';
     padding: .8em;
 }
 

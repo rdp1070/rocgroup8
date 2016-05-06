@@ -35,9 +35,9 @@ function init() {
 	a3 = document.querySelector("#a3");
 	a3.onclick = setComparison;
     
-    $(window).scroll(function(){
-    $("#rightCol").css("opacity", 1 - $(window).scrollTop() / 250);
-    });
+    //$(window).scroll(function(){
+    //$("#rightCol").css("opacity", 1 - $(window).scrollTop() / 250);
+    //});
 }
 
 /*
@@ -68,6 +68,10 @@ function fetchArtists(id) {
       }
     }
   });
+}
+
+function playTrack() {
+	
 }
 
 /*
