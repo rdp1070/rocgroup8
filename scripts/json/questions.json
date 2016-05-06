@@ -19,7 +19,6 @@
 	"answers": [
 		{"txt": "black" , "img": "media/quiz/nostalgia.png"},
 		{"txt": "orange" , "img": "media/quiz/nostalgia.png"},
-		{"txt": "green" , "img": "media/quiz/nostalgia.png"},
-		{"txt": "blue" , "img": "media/quiz/nostalgia.png"}
+		{"txt": "green" , "img": "media/quiz/nostalgia.png"}
 	]	
 }]}
