@@ -8,6 +8,11 @@ html {
   background-image: url("../media/era/backgroundGraphics.jpg");
   background-size: cover;
   font-family: 'Open Sans', sans-serif;
+  /*cursor: none;*/
+}
+
+::-webkit-scrollbar { 
+    display: none; 
 }
 
 @-webkit-keyframes rotate {
@@ -21,7 +26,7 @@ html {
 
 .cdpic{
     -webkit-animation-name: rotate; 
-    -webkit-animation-duration: 2s; 
+    -webkit-animation-duration: 3s; 
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
 }
@@ -36,7 +41,6 @@ html {
 }
 
 header {
-  position: fixed;
   top: 0px;
   left: 0px;
   width: 100%;
@@ -64,18 +68,18 @@ header {
 }
 
 #state{
+
   float: right;
   margin-right: 4%;
-    display: none;
 }
 
 #leftCol{
   font-family: AdamCG;
   position: relative;
   z-index: 2;
-  top: 408px;
+  top: 383px;
   float: left;
-  width: 30%;
+  width: 28.5%;
   padding: 1em;
   margin-left: .7%;
   color: #fffcf0;
@@ -87,7 +91,7 @@ header {
   position: relative;
   display: table;
   z-index: 1;
-  top: 408px;
+  top: 383px;
   float: right;
   width: 65%;
   padding: 1em;
@@ -97,7 +101,15 @@ header {
 }
 
 #rightStuff{
-  margin-top: -100px;
+  margin-top: -120px;
+  position: absolute;
+  z-index: 2;
+}
+
+#rightStuffUnder{
+  margin-top: -120px;
+  position: absolute;
+  z-index: 1;
 }
 
 #tempButton{
@@ -135,12 +147,16 @@ sub{
 .sub{
   display: table-cell;
   position: relative;
-  width: 29.3%;
+  width: 32%;
   margin: 0% 1% 0% 0%;
   float: left;
   /*background-color: #474b55;*/
-  
 }
+
+#rightStuff .sub{
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .2);
+}
+
 .subtext{
     font-family: 'Open Sans';
     padding: .8em;

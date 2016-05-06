@@ -19,11 +19,6 @@
       <section id="content">
       </section>
         
-      <div id="state">
-          <img class="button" id="a1" alt="The Beatles" src="media/era/the_beatles.jpg">
-          <img class="button" id="a2" alt="Michael Jackson" src="media/era/michael_jackson.jpg">
-          <img class="button" id="a3" alt="Elvis" src="media/era/elvis.jpg">
-      </div>
     </header>
     
       
@@ -33,7 +28,9 @@
         </div>
         <div class="track" id="song1"><img src="media/era/Bruno Mars/bruno_song-1.png" width="100%"></div>
         <div class="track" id="song2"><img src="media/era/Bruno Mars/bruno_song-2.png" width="100%"></div>
+        <div class="track"><img src="media/era/Bruno Mars/bruno_photo01.jpg" width="100%"></div>
         <div class="track" id="song3"><img src="media/era/Bruno Mars/bruno_song-3.png" width="100%"></div>
+        <div class="track"><img src="media/era/Bruno Mars/bruno_photo02.jpg" width="100%"></div>
         <div class="track" id="song4"><img src="media/era/Bruno Mars/bruno_song-4.png" width="100%"></div>
     </section>
       
@@ -47,27 +44,62 @@
       
       
     <section id="rightCol">
+      <div id="state">
+          <img class="button" id="a1" alt="The Beatles" src="media/era/the_beatles.jpg">
+          <img class="button" id="a2" alt="Michael Jackson" src="media/era/michael_jackson.jpg">
+          <img class="button" id="a3" alt="Elvis" src="media/era/elvis.jpg">
+      </div>
       <img src="media/era/Michael Jackson/MicahelJackson_header.png" width="70%">
       <div id="rightStuff">
       <div class="info clearfix">
-          <div class="sub"><img class="trackPicture" src="media/era/Michael Jackson/MJ_song01.png"></div>
+          <div class="sub" id="song5"><img class="trackPicture" src="media/era/Michael Jackson/MJ_song01.png"></div>
           
-          <div class="sub"><img class="trackPicture cdpic" src="media/era/Michael Jackson/MJ_song01A.png"><img class="trackPicture" src="media/era/Michael Jackson/MJ_song01BPeter.png"></div>
+          <div class="sub" id="song6"><img class="trackPicture" src="media/era/Michael Jackson/MJ_song02.png"></div>
           
-          <div class="sub"><img class="trackPicture" src="media/era/Michael Jackson/MJ_song02.png"></div>
+          <div class="sub" id="song7"><img class="trackPicture" src="media/era/Michael Jackson/MJ_song03.png"></div>
       </div>
+          
       <div class="info clearfix">
           <div class="sub"><img class="trackPicture" src="media/era/Michael Jackson/MJ_photo01.gif"></div>
           
-          <div class="sub" style="width:58.9%"><img class="trackPicture" src="media/era/Michael Jackson/MJ_photo02.jpg"></div>
+          <div class="sub" style="width:64.5%"><img class="trackPicture" src="media/era/Michael Jackson/MJ_photo02.jpg"></div>
       </div>
-      <div class="info clearfix">
-          <div class="sub" style="width:58.9%"><img class="trackPicture" src="media/era/Michael Jackson/MJ_quote.png"></div>
           
-          <div class="sub"><img class="trackPicture" src="media/era/Michael Jackson/MJ_song02.png"></div>
+      <div class="info clearfix">
+          <div class="sub" style="width:64.5%"><img class="trackPicture" src="media/era/Michael Jackson/MJ_quote.png"></div>
+          
+          <div class="sub" id="song8"><img class="trackPicture" src="media/era/Michael Jackson/MJ_song04.png"></div>
       </div>
-        </div>
+    </div>
+        
+        
+        
+    <div id="rightStuffUnder">
+      <div class="info clearfix">
+          <div class="sub"><img class="trackPicture cdpic" src="media/era/Michael Jackson/MJ_song01A.png"><img class="trackPicture" src="media/era/Michael Jackson/MJ_song01B.png"></div>
+          
+          <div class="sub"><img class="trackPicture cdpic" src="media/era/Michael Jackson/MJ_song02A.png"><img class="trackPicture" src="media/era/Michael Jackson/MJ_song02B.png"></div>
+          
+          <div class="sub"><img class="trackPicture cdpic" src="media/era/Michael Jackson/MJ_song03A.png"><img class="trackPicture" src="media/era/Michael Jackson/MJ_song03B.png"></div>
+      </div>
+          
+      <div class="info clearfix">
+          <div class="sub"><img class="trackPicture" src="media/era/Michael Jackson/MJ_photo01.gif"></div>
+          
+          <div class="sub" style="width:64.5%"><img class="trackPicture" src="media/era/Michael Jackson/MJ_photo02.jpg"></div>
+      </div>
+          
+      <div class="info clearfix">
+          <div class="sub" style="width:64.5%"><img class="trackPicture" src="media/era/Michael Jackson/MJ_quote.png"></div>
+          
+          <div class="sub"><img class="trackPicture cdpic" src="media/era/Michael Jackson/MJ_song04A.png"><img class="trackPicture" src="media/era/Michael Jackson/MJ_song04B.png"></div>
+      </div>
+    </div>
     </section>
+      
+      
+    
+      
   </body>
   <script>
     //set artist from URL to variable

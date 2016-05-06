@@ -16,10 +16,13 @@ var a1, a2, a3;
 var userArtist;
 
 //Set up song and audio stuff
-var song1, song2, song3, song4, song5;
-var audio1, audio2, audio3, audio4, audio5;
-var oneIsPlaying, twoIsPlaying, threeIsPlaying, fourIsPlaying, fiveIsPlaying;
-var isPlaying;
+var song1, song2, song3, song4;
+var audio1, audio2, audio3, audio4;
+var oneIsPlaying, twoIsPlaying, threeIsPlaying, fourIsPlaying;
+//CD songs
+var song5, song6, song7, song8;
+var audio5, audio6, audio7, audio8;
+var fiveIsPlaying, sixIsPlaying, sevenIsPlaying, eightIsPlaying;
 
 /*
 * Set the variable to starting state and start the animation loop.
@@ -45,7 +48,15 @@ function init() {
     //Setting up audio
     audio1 = new Audio("media/era/Bruno Mars/songs/when_i_was_your_man.mp3");
     audio2 = new Audio("media/era/Bruno Mars/songs/treasure.mp3");
+    audio3 = new Audio("media/era/Bruno Mars/songs/treasure.mp3");
+    audio4 = new Audio("media/era/Bruno Mars/songs/treasure.mp3");
+    //CD Audio
+    audio5 = new Audio("media/era/Bruno Mars/songs/treasure.mp3");
+    audio6 = new Audio("media/era/Bruno Mars/songs/treasure.mp3");
+    audio7 = new Audio("media/era/Bruno Mars/songs/treasure.mp3");
+    audio8 = new Audio("media/era/Bruno Mars/songs/treasure.mp3");
     
+    //Setting up audio buttons
     song1 = document.querySelector("#song1");
     song1.onclick = function(){playTrack(audio1, 1)};
     song2 = document.querySelector("#song2");
@@ -54,15 +65,41 @@ function init() {
     song3.onclick = function(){playTrack(audio3, 3)};
     song4 = document.querySelector("#song4");
     song4.onclick = function(){playTrack(audio4, 4)};
-    isPlaying = false;
+    //CD Audio buttons
+    song5 = document.querySelector("#song5");
+    song5.onclick = function(){playCDTrack(audio5, 5)};
+    song6 = document.querySelector("#song6");
+    song6.onclick = function(){playCDTrack(audio6, 6)};
+    song7 = document.querySelector("#song7");
+    song7.onclick = function(){playCDTrack(audio7, 7)};
+    song8 = document.querySelector("#song8");
+    song8.onclick = function(){playCDTrack(audio8, 8)};
 }
 
 /*
-*  Plays audio based on which button is clicked
-*
-*
+*  Plays audio for left side based on which button is clicked
+*  Turns off all audio and resets times before playing
+*  Sets values for visuals
 */
 function playTrack(audio, num) {
+    //Pause all CD songs
+    audio5.pause();
+    audio5.currentTime = 0;
+    fiveIsPlaying = false;
+    audio6.pause();
+    audio6.currentTime = 0;
+    sixIsPlaying = false;
+    audio7.pause();
+    audio7.currentTime = 0;
+    sevenIsPlaying = false;
+    audio8.pause();
+    audio8.currentTime = 0;
+    eightIsPlaying = false;
+    //CD Visuals
+    $(song5).fadeTo(600, 1);
+    $(song6).fadeTo(600, 1);
+    $(song7).fadeTo(600, 1);
+    $(song8).fadeTo(600, 1);
     if (num == 1){
         if (oneIsPlaying){
             //Audio portion
@@ -71,16 +108,28 @@ function playTrack(audio, num) {
             oneIsPlaying = false;
             
             //Visual Portion
-            song1.style="background-color: #292929;";
-            song2.style="background-color: #292929;";
+            $(song1).fadeTo(600, 1);
+            $(song2).fadeTo(600, 1);
+            $(song3).fadeTo(600, 1);
+            $(song4).fadeTo(600, 1);
         } else {
             audio2.pause();
             audio2.currentTime = 0;
+            twoIsPlaying = false;
+            audio3.pause();
+            audio3.currentTime = 0;
+            threeIsPlaying = false;
+            audio4.pause();
+            audio4.currentTime = 0;
+            fourIsPlaying = false;
+            
             audio.play();
             oneIsPlaying = true;
             
-            song1.style="opacity: 0.25;";
-            song2.style="background-color: #292929;";
+            $(song1).fadeTo(600, .2);
+            $(song2).fadeTo(600, 1);
+            $(song3).fadeTo(600, 1);
+            $(song4).fadeTo(600, 1);
         }
     } else if (num == 2){
         if (twoIsPlaying){
@@ -88,16 +137,228 @@ function playTrack(audio, num) {
             audio.currentTime = 0;
             twoIsPlaying = false;
             
-            song1.style="background-color: #292929;";
-            song2.style="background-color: #292929;";
+            $(song1).fadeTo(600, 1);
+            $(song2).fadeTo(600, 1);
+            $(song3).fadeTo(600, 1);
+            $(song4).fadeTo(600, 1);
         } else {
             audio1.pause();
             audio1.currentTime = 0;
+            oneIsPlaying = false;
+            audio3.pause();
+            audio3.currentTime = 0;
+            threeIsPlaying = false;
+            audio4.pause();
+            audio4.currentTime = 0;
+            fourIsPlaying = false;
+            
             audio.play();
             twoIsPlaying = true;
             
-            song1.style="background-color: #292929;";
-            song2.style="opacity: 0.25;";
+            $(song1).fadeTo(600, 1);
+            $(song2).fadeTo(600, .2);
+            $(song3).fadeTo(600, 1);
+            $(song4).fadeTo(600, 1);
+        }
+    } else if (num == 3){
+        if (threeIsPlaying){
+            audio.pause();
+            audio.currentTime = 0;
+            threeIsPlaying = false;
+            
+            $(song1).fadeTo(600, 1);
+            $(song2).fadeTo(600, 1);
+            $(song3).fadeTo(600, 1);
+            $(song4).fadeTo(600, 1);
+        } else {
+            audio1.pause();
+            audio1.currentTime = 0;
+            oneIsPlaying = false;
+            audio2.pause();
+            audio2.currentTime = 0;
+            twoIsPlaying = false;
+            audio4.pause();
+            audio4.currentTime = 0;
+            fourIsPlaying = false;
+            
+            audio.play();
+            threeIsPlaying = true;
+            
+            $(song1).fadeTo(600, 1);
+            $(song2).fadeTo(600, 1);
+            $(song3).fadeTo(600, .2);
+            $(song4).fadeTo(600, 1);
+        }
+    } else if (num == 4){
+        if (fourIsPlaying){
+            audio.pause();
+            audio.currentTime = 0;
+            fourIsPlaying = false;
+            
+            $(song1).fadeTo(600, 1);
+            $(song2).fadeTo(600, 1);
+            $(song3).fadeTo(600, 1);
+            $(song4).fadeTo(600, 1);
+        } else {
+            audio1.pause();
+            audio1.currentTime = 0;
+            oneIsPlaying = false;
+            audio2.pause();
+            audio2.currentTime = 0;
+            twoIsPlaying = false;
+            audio3.pause();
+            audio3.currentTime = 0;
+            threeIsPlaying = false;
+            
+            audio.play();
+            fourIsPlaying = true;
+            
+            $(song1).fadeTo(600, 1);
+            $(song2).fadeTo(600, 1);
+            $(song3).fadeTo(600, 1);
+            $(song4).fadeTo(600, .2);
+        }
+    }
+}
+
+/*
+*  Plays audio for right side based on which button is clicked
+*  Turns off all audio and resets times before playing
+*  Sets values for visuals
+*/
+function playCDTrack(audio, num) {
+    //Pause all CD songs
+    audio1.pause();
+    audio1.currentTime = 0;
+    oneIsPlaying = false;
+    audio2.pause();
+    audio2.currentTime = 0;
+    twoIsPlaying = false;
+    audio3.pause();
+    audio3.currentTime = 0;
+    threeIsPlaying = false;
+    audio4.pause();
+    audio4.currentTime = 0;
+    fourIsPlaying = false;
+    //CD Visuals
+    $(song1).fadeTo(600, 1);
+    $(song2).fadeTo(600, 1);
+    $(song3).fadeTo(600, 1);
+    $(song4).fadeTo(600, 1);
+    if (num == 5){
+        if (fiveIsPlaying){
+            //Audio portion
+            audio.pause();
+            audio.currentTime = 0;
+            fiveIsPlaying = false;
+            
+            //Visual Portion
+            $(song5).fadeTo(600, 1);
+            $(song6).fadeTo(600, 1);
+            $(song7).fadeTo(600, 1);
+            $(song8).fadeTo(600, 1);
+        } else {
+            audio6.pause();
+            audio6.currentTime = 0;
+            sixIsPlaying = false;
+            audio7.pause();
+            audio7.currentTime = 0;
+            sevenIsPlaying = false;
+            audio8.pause();
+            audio8.currentTime = 0;
+            eightIsPlaying = false;
+            
+            audio.play();
+            fiveIsPlaying = true;
+            
+            $(song5).fadeTo(600, 0);
+            $(song6).fadeTo(600, 1);
+            $(song7).fadeTo(600, 1);
+            $(song8).fadeTo(600, 1);
+        }
+    } else if (num == 6){
+        if (sixIsPlaying){
+            audio.pause();
+            audio.currentTime = 0;
+            sixIsPlaying = false;
+            
+            $(song5).fadeTo(600, 1);
+            $(song6).fadeTo(600, 1);
+            $(song7).fadeTo(600, 1);
+            $(song8).fadeTo(600, 1);
+        } else {
+            audio5.pause();
+            audio5.currentTime = 0;
+            fiveIsPlaying = false;
+            audio7.pause();
+            audio7.currentTime = 0;
+            sevenIsPlaying = false;
+            audio8.pause();
+            audio8.currentTime = 0;
+            eightIsPlaying = false;
+            
+            audio.play();
+            sixIsPlaying = true;
+            
+            $(song5).fadeTo(600, 1);
+            $(song6).fadeTo(600, 0);
+            $(song7).fadeTo(600, 1);
+            $(song8).fadeTo(600, 1);
+        }
+    } else if (num == 7){
+        if (sevenIsPlaying){
+            audio.pause();
+            audio.currentTime = 0;
+            sevenIsPlaying = false;
+            
+            $(song5).fadeTo(600, 1);
+            $(song6).fadeTo(600, 1);
+            $(song7).fadeTo(600, 1);
+            $(song8).fadeTo(600, 1);
+        } else {
+            audio5.pause();
+            audio5.currentTime = 0;
+            fiveIsPlaying = false;
+            audio6.pause();
+            audio6.currentTime = 0;
+            sixIsPlaying = false;
+            audio8.pause();
+            audio8.currentTime = 0;
+            eightIsPlaying = false;
+            
+            audio.play();
+            sevenIsPlaying = true;
+            
+            $(song5).fadeTo(600, 1);
+            $(song6).fadeTo(600, 1);
+            $(song7).fadeTo(600, 0);
+            $(song8).fadeTo(600, 1);
+        }
+    } else if (num == 8){
+        if (eightIsPlaying){
+            audio.pause();
+            audio.currentTime = 0;
+            eightIsPlaying = false;
+            
+            $(song8).fadeTo(600, 1);
+        } else {
+            audio5.pause();
+            audio5.currentTime = 0;
+            fiveIsPlaying = false;
+            audio6.pause();
+            audio6.currentTime = 0;
+            sixIsPlaying = false;
+            audio7.pause();
+            audio7.currentTime = 0;
+            sevenIsPlaying = false;
+            
+            audio.play();
+            eightIsPlaying = true;
+            
+            $(song5).fadeTo(600, 1);
+            $(song6).fadeTo(600, 1);
+            $(song7).fadeTo(600, 1);
+            $(song8).fadeTo(600, 0);
         }
     }
 }
