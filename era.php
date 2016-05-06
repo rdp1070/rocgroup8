@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-      <img src="./media/era/top_fade.png" id="fade">
+      <!--<img src="./media/era/top_fade.png" id="fade">-->
   <head>
     <meta charset="utf-8">
     <title>title</title>
@@ -28,17 +28,18 @@
     
       
     <section id="leftCol">
-        <img src="media/era/bruno.png" width="100%">
+        <img src="media/era/Bruno Mars/BrunoMars_header.png" width="100%">
         <div id="artistName">
         </div>
-        <div class="track">When I Was Your Man<p><sub>Unorthodox Jukebox</sub></p></div>
-        <div class="track">Treaure<p><sub>Unorthodox Jukebox</sub></p></div>
-        <div class="track">Locked Out Of Heaven<p><sub>Unorthodox Jukebox</sub></p></div>
-        <div class="track">Just the Way You Are<p><sub>Doo-Wops & Hooligans</sub></p></div>
+        <div class="track" id="song1">When I Was Your Man<p><sub>Unorthodox Jukebox</sub></p></div>
+        <div class="track" id="song2">Treaure<p><sub>Unorthodox Jukebox</sub></p></div>
+        <div class="track" id="song3">Locked Out Of Heaven<p><sub>Unorthodox Jukebox</sub></p></div>
+        <div class="track" id="song4">Just the Way You Are<p><sub>Doo-Wops & Hooligans</sub></p></div>
     </section>
       
     <section id="rightCol">
-      <div class="info">Comparison Track</div>
+      <img src="media/era/Michael Jackson/MicahelJackson_header.png" width="70%">
+      <div id="rightStuff">
       <div class="info clearfix">
           <div class="sub"><img class="trackPicture" src="media/era/the_beatles.jpg"><div class="subtext">Album Text</div></div>
           <div class="sub"><img class="trackPicture" src="media/era/Beatles/Beatles08.jpg"><div class="subtext">Album Text</div></div>
@@ -52,6 +53,7 @@
           <div class="sub" style="width:49%"><div class="subtext">A quote from the artist.</div></div>
           <div class="sub" style="width:40%"><img class="trackPicture" src="media/era/Beatles/Beatles11.jpg"><div class="subtext">Album Text</div></div>
       </div>
+        </div>
     </section>
   </body>
   <script>

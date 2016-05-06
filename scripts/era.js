@@ -15,6 +15,10 @@ var a1, a2, a3;
 // A string with the user's artist. 
 var userArtist;
 
+//Set up song and audio stuff
+var song1, song2, song3, song4, song5;
+var audio1, audio2, audio3, audio4, audio5;
+
 /*
 * Set the variable to starting state and start the animation loop.
 */
@@ -35,9 +39,19 @@ function init() {
 	a3 = document.querySelector("#a3");
 	a3.onclick = setComparison;
     
-    //$(window).scroll(function(){
-    //$("#rightCol").css("opacity", 1 - $(window).scrollTop() / 250);
-    //});
+    
+    audio1 = new Audio("media/era/Bruno Mars/songs/treasure.mp3");
+    //Setting up audio
+    song1 = document.querySelector("#song1");
+    song1.onclick = function(){playTrack(audio1)};
+    song2 = document.querySelector("#song2");
+    song2.onclick = playTrack;
+    song3 = document.querySelector("#song3");
+    song3.onclick = playTrack;
+    song4 = document.querySelector("#song4");
+    song4.onclick = playTrack;
+    
+    audio1.pause();
 }
 
 /*
@@ -70,8 +84,8 @@ function fetchArtists(id) {
   });
 }
 
-function playTrack() {
-	
+function playTrack(audio) {
+	audio.play();
 }
 
 /*
@@ -79,13 +93,14 @@ function playTrack() {
 *   moves state forward
 */
 function setComparison() {
-	content.innerHTML = "<h1>Compare " + userArtist + " with " + this.alt + "</h1>";
-	artistName.innerHTML = userArtist;
+	//content.innerHTML = "<h1>Compare " + userArtist + " with " + this.alt + "</h1>";
+	//artistName.innerHTML = userArtist;
 	
 	//Make all other buttons regular size
 	a1.style="transform: scale(1.0)";
 	a2.style="transform: scale(1.0)";
 	a3.style="transform: scale(1.0)";
+    
 	
 	this.style="transform: scale(1.3); margin-left: 15px; margin-right: 15px";
 	//this.style="margin: 10px";

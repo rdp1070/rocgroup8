@@ -5,8 +5,8 @@
 
 html {
   background-color: #333539;
-  background-image: url("../media/era/top_gradient.png");
-  background-attachment: fixed;
+  background-image: url("../media/era/backgroundGraphics.jpg");
+  background-size: cover;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -55,13 +55,13 @@ header {
 
 #leftCol{
   font-family: AdamCG;
-  position: fixed;
+  position: relative;
   z-index: 2;
-  top: 124px;
+  top: 408px;
   float: left;
   width: 30%;
   padding: 1em;
-  margin-left: 3%;
+  margin-left: .7%;
   color: #fffcf0;
   /*background-color: #474b55;*/
 }
@@ -71,13 +71,17 @@ header {
   position: relative;
   display: table;
   z-index: 1;
-  top: 400px;
+  top: 408px;
   float: right;
   width: 65%;
   padding: 1em;
-  margin-right: -4%;
+  margin-right: 0%;
   color: #fffcf0;
   /*background-color: #474b55;*/
+}
+
+#rightStuff{
+  margin-top: -100px;
 }
 
 #tempButton{
