@@ -17,8 +17,8 @@
 {
 	"txt": "Pick a Color",
 	"answers": [
-		{"txt": "black" , "img": "media/quiz/nostalgia.png"},
-		{"txt": "orange" , "img": "media/quiz/nostalgia.png"},
-		{"txt": "green" , "img": "media/quiz/nostalgia.png"}
+		{"txt": "purple" , "img": "media/quiz/purple.png"},
+		{"txt": "peach" , "img": "media/quiz/peach.png"},
+		{"txt": "blue" , "img": "media/quiz/blue.png"}
 	]	
 }]}

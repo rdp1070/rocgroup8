@@ -35,6 +35,8 @@ function loadInfluences() {
 */
 function setArtist() {
     'use strict';
+    
+    questionValue.innerHTML = "";
     enterAnim();
     // if the genre they picked is the same as the artist genre
     // set that artist to be the current artist. 
@@ -172,13 +174,13 @@ function changeQuestion(qNum) {
             setArtist();
         }// last line of questions
     } else if (state === "select") {
-        answers_div.innerHTML = "<span class=\"answer\"";
+        answers_div.innerHTML = "";
         questionValue.innerHTML = "Pick and Artist";
          
         // This section is fucky, continue working on it. 
-        answers_div.innerHTML += "<img class=\"answer\" onclick=\"(function(){answers[0] = questions[0].answers[0].txt; setArtist();})();\" src = \"media/quiz/select.png\">Beyonce</img>";
-        answers_div.innerHTML += "<img class=\"answer\" onclick=\"(function(){answers[0] = questions[0].answers[1].txt; setArtist();})();\" src = \"media/quiz/discover.png\">Bruno</img>";
-        answers_div.innerHTML += "<img class=\"answer\" onclick=\"(function(){answers[0] = questions[0].answers[2].txt; setArtist();})();\" src = \"media/quiz/random.png\">Foo Fighters</img>";
+        answers_div.innerHTML += "<img class=\"answer\" onclick=\"(function(){answers[0] = questions[0].answers[0].txt; setArtist();})();\" src = \"media/quiz/beyoncebg.png\"></img>";
+        answers_div.innerHTML += "<img class=\"answer\" onclick=\"(function(){answers[0] = questions[0].answers[1].txt; setArtist();})();\" src = \"media/quiz/brunobg.png\"></img>";
+        answers_div.innerHTML += "<img class=\"answer\" onclick=\"(function(){answers[0] = questions[0].answers[2].txt; setArtist();})();\" src = \"media/quiz/foobg.png\"></img>";
         
         div_holder = document.querySelectorAll(".answer");
         for (x = 0; x < div_holder.length; x += 1) {
@@ -191,7 +193,7 @@ function changeQuestion(qNum) {
             // enter anim takes -1 as direction.
             enterAnim();
     } else if (state === "start") {
-        answers_div.innerHTML = "<span class=\"answer\"";
+        answers_div.innerHTML = "";
         questionValue.innerHTML = "";
          
         // This section is fucky, continue working on it. 
