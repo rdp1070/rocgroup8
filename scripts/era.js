@@ -18,6 +18,8 @@ var userArtist;
 //Set up song and audio stuff
 var song1, song2, song3, song4, song5;
 var audio1, audio2, audio3, audio4, audio5;
+var oneIsPlaying, twoIsPlaying, threeIsPlaying, fourIsPlaying, fiveIsPlaying;
+var isPlaying;
 
 /*
 * Set the variable to starting state and start the animation loop.
@@ -40,18 +42,64 @@ function init() {
 	a3.onclick = setComparison;
     
     
-    audio1 = new Audio("media/era/Bruno Mars/songs/treasure.mp3");
     //Setting up audio
-    song1 = document.querySelector("#song1");
-    song1.onclick = function(){playTrack(audio1)};
-    song2 = document.querySelector("#song2");
-    song2.onclick = playTrack;
-    song3 = document.querySelector("#song3");
-    song3.onclick = playTrack;
-    song4 = document.querySelector("#song4");
-    song4.onclick = playTrack;
+    audio1 = new Audio("media/era/Bruno Mars/songs/when_i_was_your_man.mp3");
+    audio2 = new Audio("media/era/Bruno Mars/songs/treasure.mp3");
     
-    audio1.pause();
+    song1 = document.querySelector("#song1");
+    song1.onclick = function(){playTrack(audio1, 1)};
+    song2 = document.querySelector("#song2");
+    song2.onclick = function(){playTrack(audio2, 2)};
+    song3 = document.querySelector("#song3");
+    song3.onclick = function(){playTrack(audio3, 3)};
+    song4 = document.querySelector("#song4");
+    song4.onclick = function(){playTrack(audio4, 4)};
+    isPlaying = false;
+}
+
+/*
+*  Plays audio based on which button is clicked
+*
+*
+*/
+function playTrack(audio, num) {
+    if (num == 1){
+        if (oneIsPlaying){
+            //Audio portion
+            audio.pause();
+            audio.currentTime = 0;
+            oneIsPlaying = false;
+            
+            //Visual Portion
+            song1.style="background-color: #292929;";
+            song2.style="background-color: #292929;";
+        } else {
+            audio2.pause();
+            audio2.currentTime = 0;
+            audio.play();
+            oneIsPlaying = true;
+            
+            song1.style="background-color: #000000;";
+            song2.style="background-color: #292929;";
+        }
+    } else if (num == 2){
+        if (twoIsPlaying){
+            audio.pause();
+            audio.currentTime = 0;
+            twoIsPlaying = false;
+            
+            song1.style="background-color: #292929;";
+            song2.style="background-color: #292929;";
+        } else {
+            audio1.pause();
+            audio1.currentTime = 0;
+            audio.play();
+            twoIsPlaying = true;
+            
+            song1.style="background-color: #292929;";
+            song2.style="background-color: #000000;";
+        }
+    }
 }
 
 /*
@@ -82,10 +130,6 @@ function fetchArtists(id) {
       }
     }
   });
-}
-
-function playTrack(audio) {
-	audio.play();
 }
 
 /*
