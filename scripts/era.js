@@ -79,7 +79,7 @@ function playTrack(audio, num) {
             audio.play();
             oneIsPlaying = true;
             
-            song1.style="background-color: #000000;";
+            song1.style="opacity: 0.25;";
             song2.style="background-color: #292929;";
         }
     } else if (num == 2){
@@ -97,7 +97,7 @@ function playTrack(audio, num) {
             twoIsPlaying = true;
             
             song1.style="background-color: #292929;";
-            song2.style="background-color: #000000;";
+            song2.style="opacity: 0.25;";
         }
     }
 }
