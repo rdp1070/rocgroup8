@@ -23,17 +23,14 @@ window.onload = init; // on the page booting up, call the init function!
 			ctx = canvas.getContext('2d');
 			canvas2 = doc.getElementById("canvas2");
 			ctx2 = canvas2.getContext('2d');
-			videoElement = doc.querySelector('video'); 
+			anim = doc.querySelector('#anim');
+            videoElement = doc.querySelector('video');
 			w = videoElement.clientWidth;
 			h = videoElement.clientHeight;
 			canvas.width = w; 
 			canvas.height = h;
 			canvas2.width = w; 
 			canvas2.height = h;
-			
-			// I should load in the animation on this line
-			// !!!!!!!
-			// need the anim file from the dez
 
 			if(navigator.webkitGetUserMedia!=null) { 
 			var options = { 
@@ -45,7 +42,7 @@ window.onload = init; // on the page booting up, call the init function!
 			navigator.webkitGetUserMedia(options, 
 				function(stream) { 
 					//turn the stream into a magic URL 
-					videoElement.src = window.webkitURL.createObjectURL(stream); 
+					videoElement.src = window.URL.createObjectURL(stream); 
 				},
 				function(e) { 
 					console.log("error happened"); 
@@ -160,8 +157,8 @@ window.onload = init; // on the page booting up, call the init function!
 			// This is where the animation gets drawn
 			// Take in the img data from a video provided by dez
 			// :D !!!
-
+            ctx.drawImage(anim, 0, 0, w, h);
 			// Right now it just makes the screen black. 
-			ctx.fillStyle = "black";
-			ctx.fillRect(0,0,w,h);
+			//ctx.fillStyle = "black";
+			//ctx.fillRect(0,0,w,h);
 		}
