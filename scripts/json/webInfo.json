@@ -9,6 +9,7 @@
     "song4": "media/era/Bruno Mars/bruno_song-4.png",  
     "pic1": "media/era/Bruno Mars/bruno_photo01.jpg", 
     "pic2": "media/era/Bruno Mars/bruno_photo02.jpg",
+<<<<<<< Updated upstream
     "songs": [
       "The Lazy Song",
       "It Will Rain",
@@ -23,6 +24,12 @@
 	  "Money Maker Her Smile",
 	  "Uptown Funk"
     ]
+=======
+    "audio1": "media/era/Bruno Mars/songs/Bruno Mars - When I Was Your Man (Audio).mp3",
+    "audio2": "media/era/Bruno Mars/songs/Just The Way You Are - Bruno Mars (Audio).mp3",
+    "audio3": "media/era/Bruno Mars/songs/Bruno Mars Locked Out Of Heaven [audio HQ].mp3",
+    "audio4": "media/era/Bruno Mars/songs/Bruno Mars - Grenade (Audio).mp3"
+>>>>>>> Stashed changes
   }, 
   {
     "id": "Beyonce",
@@ -34,6 +41,7 @@
     "song4": "media/era/Beyonce/B_song04.png",  
     "pic1": "media/era/Beyonce/Beyonce_photo01.png", 
     "pic2": "media/era/Beyonce/Beyonce_photo02.png",
+<<<<<<< Updated upstream
     "songs": [
       "Halo",
       "Love On Top",
@@ -52,10 +60,17 @@
 	  "Dance For You",
 	  "Partition"
     ]
+=======
+    "audio1": "media/era/Beyonce/songs/Beyonce - Halo.mp3",
+    "audio2": "media/era/Beyonce/songs/Beyonce - Love On Top.mp3",
+    "audio3": "media/era/Beyonce/songs/Schoolin-' Life - Beyonce - 4 (Deluxe Edition).mp3",
+    "audio4": "media/era/Beyonce/songs/Beyonce - Single Ladies (Put A Ring On It).mp3"
+>>>>>>> Stashed changes
   }, 
   {
     "id": "Foo_Fighters",
     "artist": "Foo Fighters",
+<<<<<<< Updated upstream
     "songs": [
       "Learn To Fly",
       "Monkey Wrench",
@@ -70,5 +85,18 @@
 	  "Walk",
 	  "All My Life"
     ]
+=======
+    "header": "media/era/Foo Fighters/foofighters_header.png",
+    "song1": "media/era/Foo Fighters/foo_song-01.png",  
+    "song2": "media/era/Foo Fighters/foo_song-02.png",  
+    "song3": "media/era/Foo Fighters/foo_song-03.png",  
+    "song4": "media/era/Foo Fighters/foo_song-04.png",  
+    "pic1": "media/era/Foo Fighters/foo-pic1.jpg", 
+    "pic2": "media/era/Foo Fighters/foo-pic2.jpg",
+    "audio1": "media/era/Foo Fighters/songs/these days.mp3",
+    "audio2": "media/era/Foo Fighters/songs/best of you.mp3",
+    "audio3": "media/era/Foo Fighters/songs/learn to fly.mp3",
+    "audio4": "media/era/Foo Fighters/songs/everlong.mp3"
+>>>>>>> Stashed changes
   }]
 }

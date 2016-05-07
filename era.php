@@ -43,9 +43,9 @@
       
     <section id="rightCol">
       <div id="state">
-          <div class="button" id="a1">Coldplay</div>
-          <div class="button" id="a2">Michael Jackson</div>
-          <div class="button" id="a3">Prince</div>
+          <div class="button" id="a1"></div>
+          <div class="button" id="a2"></div>
+          <div class="button" id="a3"></div>
       </div>
         <div id="rightHead"></div>
       <div id="rightStuff">
@@ -82,13 +82,13 @@
       </div>
           
       <div class="info clearfix">
-          <div class="sub"><img class="trackPicture" src="media/era/Michael Jackson/MJ_photo01.gif"></div>
+          <div class="sub"><img class="trackPicture" style="opacity: 0.0;" src="media/era/Michael Jackson/MJ_photo01.gif"></div>
           
-          <div class="sub" style="width:64.5%"><img class="trackPicture" src="media/era/Michael Jackson/MJ_photo02.jpg"></div>
+          <div class="sub" style="width:64.5%"><img class="trackPicture" style="opacity: 0.0;" src="media/era/Michael Jackson/MJ_photo02.jpg"></div>
       </div>
           
       <div class="info clearfix">
-          <div class="sub" style="width:64.5%"><img class="trackPicture" src="media/era/Michael Jackson/MJ_quote.png"></div>
+          <div class="sub" style="width:64.5%"><img class="trackPicture" style="opacity: 0.0;" src="media/era/Michael Jackson/MJ_quote.png"></div>
           
           <div class="sub" id="cd4"></div>
       </div>
