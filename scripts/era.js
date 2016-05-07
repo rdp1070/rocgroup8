@@ -35,7 +35,7 @@ var whichComp;
 */
 function init() {
     //DELETE THIS BOY
-    userArtist = "Beyonce";
+    userArtist = "Bruno_Mars";
   
     html = "";
 	content = document.querySelector("#content");
@@ -54,10 +54,10 @@ function init() {
     
     
     //Setting up audio
-    audio1 = new Audio("media/era/Bruno Mars/songs/when_i_was_your_man.mp3");
-    audio2 = new Audio("media/era/Bruno Mars/songs/treasure.mp3");
-    audio3 = new Audio("media/era/Bruno Mars/songs/treasure.mp3");
-    audio4 = new Audio("media/era/Bruno Mars/songs/treasure.mp3");
+    //audio1 = new Audio("media/era/Bruno Mars/songs/when_i_was_your_man.mp3");
+    //audio2 = new Audio("media/era/Bruno Mars/songs/treasure.mp3");
+    //audio3 = new Audio("media/era/Bruno Mars/songs/treasure.mp3");
+    //audio4 = new Audio("media/era/Bruno Mars/songs/treasure.mp3");
     //CD Audio
     audio5 = new Audio("media/era/Bruno Mars/songs/treasure.mp3");
     audio6 = new Audio("media/era/Bruno Mars/songs/treasure.mp3");
@@ -137,6 +137,19 @@ function setRight(){
         currentSubArtist = subArtists[2];
     }
     
+    console.log(currentSubArtist.subArtists[0].first[0].name);
+    console.log(currentSubArtist.subArtists[0].second[0].name);
+    console.log(currentSubArtist.subArtists[0].third[0].name);
+    
+    
+    $("#a1").empty();
+    $("#a2").empty();
+    $("#a3").empty();
+    
+    $("#a1").append(currentSubArtist.subArtists[0].first[0].name);
+    $("#a2").append(currentSubArtist.subArtists[0].second[0].name);
+    $("#a3").append(currentSubArtist.subArtists[0].third[0].name);
+    
     //Clear
     $("#rightHead").empty();
     $('#song5').empty();
@@ -195,10 +208,14 @@ function setRight(){
     $('#rightPic').append('<img class="trackPicture" src="' + currentSubArtist.subArtists[0].first[0].pic1 + '">').hide().fadeIn(600);
     $('#quote').append('<img class="trackPicture" src="' + currentSubArtist.subArtists[0].first[0].quote + '">').hide().fadeIn(600);
     $('#song8').append('<img class="trackPicture" src="' + currentSubArtist.subArtists[0].first[0].song4 + '">').hide().fadeIn(600);
-    $('#cd1').append('<img class="trackPicture cdpic" src="' + currentSubArtist.subArtists[0].first[0].song1A + '"><img class="trackPicture" src="' + currentSubArtist.subArtists[0].first[0].song1B + '">').hide().fadeIn(600);
-    $('#cd2').append('<img class="trackPicture cdpic" src="' + currentSubArtist.subArtists[0].first[0].song2A + '"><img class="trackPicture" src="' + currentSubArtist.subArtists[0].first[0].song2B + '">').hide().fadeIn(600);
-    $('#cd3').append('<img class="trackPicture cdpic" src="' + currentSubArtist.subArtists[0].first[0].song3A + '"><img class="trackPicture" src="' + currentSubArtist.subArtists[0].first[0].song3B + '">').hide().fadeIn(600);
-    $('#cd4').append('<img class="trackPicture cdpic" src="' + currentSubArtist.subArtists[0].first[0].song4A + '"><img class="trackPicture" src="' + currentSubArtist.subArtists[0].first[0].song4B + '">').hide().fadeIn(600);
+    $('#cd1').append('<img class="trackPicture cdpic" src="' + currentSubArtist.subArtists[0].first[0].song1A + '"><img class="trackPicture" src="' + currentSubArtist.subArtists[0].first[0].song1B + '">').hide().fadeIn(1500);
+    $('#cd2').append('<img class="trackPicture cdpic" src="' + currentSubArtist.subArtists[0].first[0].song2A + '"><img class="trackPicture" src="' + currentSubArtist.subArtists[0].first[0].song2B + '">').hide().fadeIn(1500);
+    $('#cd3').append('<img class="trackPicture cdpic" src="' + currentSubArtist.subArtists[0].first[0].song3A + '"><img class="trackPicture" src="' + currentSubArtist.subArtists[0].first[0].song3B + '">').hide().fadeIn(1500);
+    $('#cd4').append('<img class="trackPicture cdpic" src="' + currentSubArtist.subArtists[0].first[0].song4A + '"><img class="trackPicture" src="' + currentSubArtist.subArtists[0].first[0].song4B + '">').hide().fadeIn(1500);
+    audio5 = new Audio(currentSubArtist.subArtists[0].first[0].audio1);
+    audio6 = new Audio(currentSubArtist.subArtists[0].first[0].audio2);
+    audio7 = new Audio(currentSubArtist.subArtists[0].first[0].audio3);
+    audio8 = new Audio(currentSubArtist.subArtists[0].first[0].audio4);
     } else if (whichComp == 2){
     
     $("#rightHead").append('<img src="' + currentSubArtist.subArtists[0].second[0].header + '" width="70%">').hide().fadeIn(600);
@@ -209,10 +226,14 @@ function setRight(){
     $('#rightPic').append('<img class="trackPicture" src="' + currentSubArtist.subArtists[0].second[0].pic1 + '">').hide().fadeIn(600);
     $('#quote').append('<img class="trackPicture" src="' + currentSubArtist.subArtists[0].second[0].quote + '">').hide().fadeIn(600);
     $('#song8').append('<img class="trackPicture" src="' + currentSubArtist.subArtists[0].second[0].song4 + '">').hide().fadeIn(600);
-    $('#cd1').append('<img class="trackPicture cdpic" src="' + currentSubArtist.subArtists[0].second[0].song1A + '"><img class="trackPicture" src="' + currentSubArtist.subArtists[0].second[0].song1B + '">').hide().fadeIn(600);
-    $('#cd2').append('<img class="trackPicture cdpic" src="' + currentSubArtist.subArtists[0].second[0].song2A + '"><img class="trackPicture" src="' + currentSubArtist.subArtists[0].second[0].song2B + '">').hide().fadeIn(600);
-    $('#cd3').append('<img class="trackPicture cdpic" src="' + currentSubArtist.subArtists[0].second[0].song3A + '"><img class="trackPicture" src="' + currentSubArtist.subArtists[0].second[0].song3B + '">').hide().fadeIn(600);
-    $('#cd4').append('<img class="trackPicture cdpic" src="' + currentSubArtist.subArtists[0].second[0].song4A + '"><img class="trackPicture" src="' + currentSubArtist.subArtists[0].second[0].song4B + '">').hide().fadeIn(600);
+    $('#cd1').append('<img class="trackPicture cdpic" src="' + currentSubArtist.subArtists[0].second[0].song1A + '"><img class="trackPicture" src="' + currentSubArtist.subArtists[0].second[0].song1B + '">').hide().fadeIn(1500);
+    $('#cd2').append('<img class="trackPicture cdpic" src="' + currentSubArtist.subArtists[0].second[0].song2A + '"><img class="trackPicture" src="' + currentSubArtist.subArtists[0].second[0].song2B + '">').hide().fadeIn(1500);
+    $('#cd3').append('<img class="trackPicture cdpic" src="' + currentSubArtist.subArtists[0].second[0].song3A + '"><img class="trackPicture" src="' + currentSubArtist.subArtists[0].second[0].song3B + '">').hide().fadeIn(1500);
+    $('#cd4').append('<img class="trackPicture cdpic" src="' + currentSubArtist.subArtists[0].second[0].song4A + '"><img class="trackPicture" src="' + currentSubArtist.subArtists[0].second[0].song4B + '">').hide().fadeIn(1500);
+    audio5 = new Audio(currentSubArtist.subArtists[0].second[0].audio1);
+    audio6 = new Audio(currentSubArtist.subArtists[0].second[0].audio2);
+    audio7 = new Audio(currentSubArtist.subArtists[0].second[0].audio3);
+    audio8 = new Audio(currentSubArtist.subArtists[0].second[0].audio4);
     } else if (whichComp == 3){
     
     $("#rightHead").append('<img src="' + currentSubArtist.subArtists[0].third[0].header + '" width="70%">').hide().fadeIn(600);
@@ -223,10 +244,14 @@ function setRight(){
     $('#rightPic').append('<img class="trackPicture" src="' + currentSubArtist.subArtists[0].third[0].pic1 + '">').hide().fadeIn(600);
     $('#quote').append('<img class="trackPicture" src="' + currentSubArtist.subArtists[0].third[0].quote + '">').hide().fadeIn(600);
     $('#song8').append('<img class="trackPicture" src="' + currentSubArtist.subArtists[0].third[0].song4 + '">').hide().fadeIn(600);
-    $('#cd1').append('<img class="trackPicture cdpic" src="' + currentSubArtist.subArtists[0].third[0].song1A + '"><img class="trackPicture" src="' + currentSubArtist.subArtists[0].third[0].song1B + '">').hide().fadeIn(600);
-    $('#cd2').append('<img class="trackPicture cdpic" src="' + currentSubArtist.subArtists[0].third[0].song2A + '"><img class="trackPicture" src="' + currentSubArtist.subArtists[0].third[0].song2B + '">').hide().fadeIn(600);
-    $('#cd3').append('<img class="trackPicture cdpic" src="' + currentSubArtist.subArtists[0].third[0].song3A + '"><img class="trackPicture" src="' + currentSubArtist.subArtists[0].third[0].song3B + '">').hide().fadeIn(600);
-    $('#cd4').append('<img class="trackPicture cdpic" src="' + currentSubArtist.subArtists[0].third[0].song4A + '"><img class="trackPicture" src="' + currentSubArtist.subArtists[0].third[0].song4B + '">').hide().fadeIn(600);
+    $('#cd1').append('<img class="trackPicture cdpic" src="' + currentSubArtist.subArtists[0].third[0].song1A + '"><img class="trackPicture" src="' + currentSubArtist.subArtists[0].third[0].song1B + '">').hide().fadeIn(1500);
+    $('#cd2').append('<img class="trackPicture cdpic" src="' + currentSubArtist.subArtists[0].third[0].song2A + '"><img class="trackPicture" src="' + currentSubArtist.subArtists[0].third[0].song2B + '">').hide().fadeIn(1500);
+    $('#cd3').append('<img class="trackPicture cdpic" src="' + currentSubArtist.subArtists[0].third[0].song3A + '"><img class="trackPicture" src="' + currentSubArtist.subArtists[0].third[0].song3B + '">').hide().fadeIn(1500);
+    $('#cd4').append('<img class="trackPicture cdpic" src="' + currentSubArtist.subArtists[0].third[0].song4A + '"><img class="trackPicture" src="' + currentSubArtist.subArtists[0].third[0].song4B + '">').hide().fadeIn(1500);
+    audio5 = new Audio(currentSubArtist.subArtists[0].third[0].audio1);
+    audio6 = new Audio(currentSubArtist.subArtists[0].third[0].audio2);
+    audio7 = new Audio(currentSubArtist.subArtists[0].third[0].audio3);
+    audio8 = new Audio(currentSubArtist.subArtists[0].third[0].audio4);
     }
 }
 
@@ -276,6 +301,12 @@ function setLeft(){
     $('#song3').append('<img src="' + currentArtist.song3 + '" width="100%">');
     $('#pic2').append('<img src="' + currentArtist.pic2 + '" width="100%">');
     $('#song4').append('<img src="' + currentArtist.song4 + '" width="100%">');
+    
+    //Setting up audio
+    audio1 = new Audio(currentArtist.audio1);
+    audio2 = new Audio(currentArtist.audio2);
+    audio3 = new Audio(currentArtist.audio3);
+    audio4 = new Audio(currentArtist.audio4);
 }
 
 /*
@@ -617,12 +648,7 @@ function setComparison(counter) {
     }
     
     setRight();
-    
-	
-	//this.style="transform: scale(1.3); margin-left: 15px; margin-right: 15px";
-	this.style="background-color: #101010;";
-	//hide the buttons
-	//state.style.display="none";
+
 }
 
 
