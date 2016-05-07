@@ -1,0 +1,68 @@
+@font-face{
+  font-family: AdamCG;
+  src: url("../media/fonts/ADAM.CG PRO.otf");
+}
+
+body {
+    background-image: url("../media/end/background.png");
+    background-size: cover;
+    color: white;
+    font-family: AdamCG;
+    text-align: center;
+}
+
+#loading{
+    -webkit-animation-name: rotate; 
+    -webkit-animation-duration: 3s; 
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+
+    position: absolute;
+    left: 46vw;
+    top: 81vh;
+}
+
+#artist_art {
+    height: 55vh;
+    position: absolute;
+    top: 20vh;
+    left: 50vw;
+}
+
+#influence {
+    font-size: 28pt;
+    position: absolute;
+    top: 30vh;
+    left: 13vw;
+}
+
+#artist_text {
+    position: absolute;
+    font-size: 20pt;
+    top: 37vh;
+    left: 13vw;
+}
+
+button {
+    position: relative;
+    top: 51%;
+    width: 31.5%;
+    height: 10%;
+}
+
+
+#artist_name {
+    position: absolute;
+    top: 50vh;
+    left: 13vw;
+    font-size: 40pt;
+}
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to { 
+        -webkit-transform: rotate(360deg);
+    }
+}
+
