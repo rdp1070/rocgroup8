@@ -43,30 +43,30 @@
       
     <section id="rightCol">
       <div id="state">
-          <div class="button" id="a1">Jimi Hendrix</div>
-          <div class="button" id="a2">Elvis Presley</div>
-          <div class="button" id="a3">Michael Jackson</div>
+          <div class="button" id="a1">Coldplay</div>
+          <div class="button" id="a2">Michael Jackson</div>
+          <div class="button" id="a3">Prince</div>
       </div>
-      <img src="media/era/Michael Jackson/MicahelJackson_header.png" width="70%">
+        <div id="rightHead"></div>
       <div id="rightStuff">
       <div class="info clearfix">
-          <div class="sub" id="song5"><img class="trackPicture" src="media/era/Michael Jackson/MJ_song01.png"></div>
+          <div class="sub" id="song5"></div>
           
-          <div class="sub" id="song6"><img class="trackPicture" src="media/era/Michael Jackson/MJ_song02.png"></div>
+          <div class="sub" id="song6"></div>
           
-          <div class="sub" id="song7"><img class="trackPicture" src="media/era/Michael Jackson/MJ_song03.png"></div>
+          <div class="sub" id="song7"></div>
       </div>
           
       <div class="info clearfix">
-          <div class="sub"><img class="trackPicture" src="media/era/Michael Jackson/MJ_photo01.gif"></div>
+          <div class="sub" id="gif"></div>
           
-          <div class="sub" style="width:64.5%"><img class="trackPicture" src="media/era/Michael Jackson/MJ_photo02.jpg"></div>
+          <div class="sub" id="rightPic" style="width:64.5%"></div>
       </div>
           
       <div class="info clearfix">
-          <div class="sub" style="width:64.5%"><img class="trackPicture" src="media/era/Michael Jackson/MJ_quote.png"></div>
+          <div class="sub" id="quote" style="width:64.5%"></div>
           
-          <div class="sub" id="song8"><img class="trackPicture" src="media/era/Michael Jackson/MJ_song04.png"></div>
+          <div class="sub" id="song8"></div>
       </div>
     </div>
         
@@ -74,11 +74,11 @@
         
     <div id="rightStuffUnder">
       <div class="info clearfix">
-          <div class="sub"><img class="trackPicture cdpic" src="media/era/Michael Jackson/MJ_song01A.png"><img class="trackPicture" src="media/era/Michael Jackson/MJ_song01B.png"></div>
+          <div class="sub" id="cd1"></div>
           
-          <div class="sub"><img class="trackPicture cdpic" src="media/era/Michael Jackson/MJ_song02A.png"><img class="trackPicture" src="media/era/Michael Jackson/MJ_song02B.png"></div>
+          <div class="sub" id="cd2"></div>
           
-          <div class="sub"><img class="trackPicture cdpic" src="media/era/Michael Jackson/MJ_song03A.png"><img class="trackPicture" src="media/era/Michael Jackson/MJ_song03B.png"></div>
+          <div class="sub" id="cd3"></div>
       </div>
           
       <div class="info clearfix">
@@ -90,7 +90,7 @@
       <div class="info clearfix">
           <div class="sub" style="width:64.5%"><img class="trackPicture" src="media/era/Michael Jackson/MJ_quote.png"></div>
           
-          <div class="sub"><img class="trackPicture cdpic" src="media/era/Michael Jackson/MJ_song04A.png"><img class="trackPicture" src="media/era/Michael Jackson/MJ_song04B.png"></div>
+          <div class="sub" id="cd4"></div>
       </div>
     </div>
     </section>

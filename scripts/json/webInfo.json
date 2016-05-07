@@ -8,7 +8,21 @@
     "song3": "media/era/Bruno Mars/bruno_song-3.png",  
     "song4": "media/era/Bruno Mars/bruno_song-4.png",  
     "pic1": "media/era/Bruno Mars/bruno_photo01.jpg", 
-    "pic2": "media/era/Bruno Mars/bruno_photo02.jpg"
+    "pic2": "media/era/Bruno Mars/bruno_photo02.jpg",
+    "songs": [
+      "The Lazy Song",
+      "It Will Rain",
+	  "Gorilla",
+	  "Just The Way You Are",
+	  "When I Was Your Man",
+	  "Locked Out Of Heaven",
+	  "Grenade",
+	  "Welcome Back",
+	  "Moonshine",
+	  "Our First Time",
+	  "Money Maker Her Smile",
+	  "Uptown Funk"
+    ]
   }, 
   {
     "id": "Beyonce",
@@ -19,10 +33,42 @@
     "song3": "media/era/Beyonce/B_song03.png",  
     "song4": "media/era/Beyonce/B_song04.png",  
     "pic1": "media/era/Beyonce/Beyonce_photo01.png", 
-    "pic2": "media/era/Beyonce/Beyonce_photo02.png"
+    "pic2": "media/era/Beyonce/Beyonce_photo02.png",
+    "songs": [
+      "Halo",
+      "Love On Top",
+	  "Schoolin Life",
+	  "Single Ladies",
+	  "I Was Here",
+	  "Listen",
+	  "Bonnie And Clyde",
+	  "Ireplaceable",
+	  "Ego",
+	  "Upgrade",
+	  "1x1",
+	  "Resentment"
+	  "You Are My Rock",
+	  "Best Thing I Never Had",
+	  "Dance For You",
+	  "Partition"
+    ]
   }, 
   {
     "id": "Foo_Fighters",
-    "artist": "Foo Fighters"
+    "artist": "Foo Fighters",
+    "songs": [
+      "Learn To Fly",
+      "Monkey Wrench",
+	  "The Pretender",
+	  "Something From Nothing",
+	  "Everlong",
+	  "Times Like These",
+	  "Saint Cecilia",
+	  "These Days",
+	  "Best Of You",
+	  "My Hero",
+	  "Walk",
+	  "All My Life"
+    ]
   }]
 }
