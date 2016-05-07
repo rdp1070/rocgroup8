@@ -26,16 +26,16 @@ var fiveIsPlaying, sixIsPlaying, sevenIsPlaying, eightIsPlaying;
 
 //JSON Stuff
 var artists = [];
-var imageArray = [];
+var subArtists = [];
 
 /*
 * Set the variable to starting state and start the animation loop.
 */
 function init() {
     //DELETE THIS BOY
-    userArtist = "Bruno_Mars";
+    userArtist = "Beyonce";
   
-	html = "";
+    html = "";
 	content = document.querySelector("#content");
 	state = document.querySelector("#state");
     leftCol = document.querySelector("#leftCol");
@@ -81,10 +81,37 @@ function init() {
     song8 = document.querySelector("#song8");
     song8.onclick = function(){playCDTrack(audio8, 8)};
     
+    
     loadLeftArtists();
+    loadRightArtists();
     //Giving JSON time to parse
-    setTimeout(setLeft, 1000)
-    console.log(userArtist);
+    setTimeout(setLeft, 1000);
+    //setTimeout(setQueries, 1200);
+
+}
+
+/*
+*  Reads JSON file containing assets
+*
+*/
+function loadRightArtists() {
+    'use strict';
+    var xhr = new XMLHttpRequest(),
+        url = "scripts/json/subArtists.json";
+    xhr.onload = function () {
+        // JSON.parse() converts a string to JSON. 
+        var myJSON = JSON.parse(xhr.responseText),
+            allRightArtists = myJSON.artists,
+            i;
+        for (i = 0; i < allRightArtists.length; i += 1) {
+            subArtists[i] = allRightArtists[i];
+            console.log(subArtists[i].subArtists[0].first[0].name);
+        }
+    };
+    
+    xhr.open('GET', url, true);
+    xhr.send();
+    
 }
 
 /*
@@ -102,7 +129,7 @@ function loadLeftArtists() {
             i;
         for (i = 0; i < allArtists.length; i += 1) {
             artists[i] = allArtists[i];
-            console.log(artists[i].header);
+            console.log(artists[i]);
         }
     };
     
@@ -120,15 +147,19 @@ function setLeft(){
     
     if (userArtist === "Bruno_Mars"){
         currentArtist = artists[0];
+    } else if (userArtist === "Beyonce"){
+        currentArtist = artists[1];
+    } else if (userArtist === "Foo_Fighters"){
+        currentArtist = artists[2];
     }
     
-    $(leftCol).append('<img src="' + currentArtist.header + '" width="100%">');
-    $(leftCol).append('<div class="track" id="song1"><img src="' + currentArtist.song1 + '" width="100%"></div>');
-    $(leftCol).append('<div class="track" id="song2"><img src="' + currentArtist.song2 + '" width="100%"></div>');
-    $(leftCol).append('<div class="track"><img src="' + currentArtist.pic1 + '" width="100%"></div>');
-    $(leftCol).append('<div class="track" id="song3"><img src="' + currentArtist.song3 + '" width="100%"></div>');
-    $(leftCol).append('<div class="track"><img src="' + currentArtist.pic2 + '" width="100%"></div>');
-    $(leftCol).append('<div class="track" id="song4"><img src="' + currentArtist.song4 + '" width="100%"></div>');
+    $("#leftCol").prepend('<img src="' + currentArtist.header + '" width="100%">').hide().fadeIn(600);
+    $('#song1').append('<img src="' + currentArtist.song1 + '" width="100%">');
+    $('#song2').append('<img src="' + currentArtist.song2 + '" width="100%">');
+    $('#pic1').append('<img src="' + currentArtist.pic1 + '" width="100%">');
+    $('#song3').append('<img src="' + currentArtist.song3 + '" width="100%">');
+    $('#pic2').append('<img src="' + currentArtist.pic2 + '" width="100%">');
+    $('#song4').append('<img src="' + currentArtist.song4 + '" width="100%">');
 }
 
 /*

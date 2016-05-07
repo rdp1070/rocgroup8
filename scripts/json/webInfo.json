@@ -2,17 +2,24 @@
   "artists": [{
     "id": "Bruno_Mars",
     "artist": "Bruno Mars",
-     "header": "media/era/Bruno Mars/BrunoMars_header.png",
-     "song1": "media/era/Bruno Mars/bruno_song-1.png",  
-     "song2": "media/era/Bruno Mars/bruno_song-2.png",  
-     "song3": "media/era/Bruno Mars/bruno_song-3.png",  
+    "header": "media/era/Bruno Mars/BrunoMars_header.png",
+    "song1": "media/era/Bruno Mars/bruno_song-1.png",  
+    "song2": "media/era/Bruno Mars/bruno_song-2.png",  
+    "song3": "media/era/Bruno Mars/bruno_song-3.png",  
     "song4": "media/era/Bruno Mars/bruno_song-4.png",  
-     "pic1": "media/era/Bruno Mars/bruno_photo01.jpg", 
-     "pic2": "media/era/Bruno Mars/bruno_photo02.jpg"
+    "pic1": "media/era/Bruno Mars/bruno_photo01.jpg", 
+    "pic2": "media/era/Bruno Mars/bruno_photo02.jpg"
   }, 
   {
     "id": "Beyonce",
-    "artist": "Beyonce"
+    "artist": "Beyonce",
+    "header": "media/era/Beyonce/beyonceHeader.png",
+    "song1": "media/era/Beyonce/B_song01.png",  
+    "song2": "media/era/Beyonce/B_song02.png",  
+    "song3": "media/era/Beyonce/B_song03.png",  
+    "song4": "media/era/Beyonce/B_song04.png",  
+    "pic1": "media/era/Beyonce/Beyonce_photo01.png", 
+    "pic2": "media/era/Beyonce/Beyonce_photo02.png"
   }, 
   {
     "id": "Foo_Fighters",

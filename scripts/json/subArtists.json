@@ -1,0 +1,77 @@
+{
+  "artists": [{
+    "artist": "Bruno Mars",
+    "subArtists": [{
+        "first": [{
+            "name": "Coldplay",
+            "header": "",
+            "song1": "",
+            "song2": "",
+            "song3": "",
+            "song4": "",
+            "pic1": "",
+            "gif1": "",
+            "quote": "",
+            "song1A": "",
+            "song2A": "",
+            "song3A": "",
+            "song4A": "",
+            "song1B": "",
+            "song2B": "",
+            "song3B": "",
+            "song4B": ""
+        }],
+        "second": [{
+            "name": "Michael Jackson",
+            "header": "",
+            "song1": "",
+            "song2": "",
+            "song3": "",
+            "song4": "",
+            "pic1": "",
+            "gif1": "",
+            "quote": "",
+            "song1A": "",
+            "song2A": "",
+            "song3A": "",
+            "song4A": "",
+            "song1B": "",
+            "song2B": "",
+            "song3B": "",
+            "song4B": ""
+        }],
+        "third": [{
+            "name": "Prince",
+            "header": "",
+            "song1": "",
+            "song2": "",
+            "song3": "",
+            "song4": "",
+            "pic1": "",
+            "gif1": "",
+            "quote": "",
+            "song1A": "",
+            "song2A": "",
+            "song3A": "",
+            "song4A": "",
+            "song1B": "",
+            "song2B": "",
+            "song3B": "",
+            "song4B": ""
+        }]
+    }]
+  },
+  {
+    "artist": "Beyonce",
+    "subArtists": [{
+        
+    }]
+  }, 
+  {
+    "artist": "Foo Fighters",
+    "subArtists": [{
+        
+    }]
+  }
+]
+}

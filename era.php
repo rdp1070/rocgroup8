@@ -23,13 +23,13 @@
     
       
     <section id="leftCol">
-        <img src="media/era/Bruno Mars/BrunoMars_header.png" width="100%">
-        <div class="track" id="song1"><img src="media/era/Bruno Mars/bruno_song-1.png" width="100%"></div>
-        <div class="track" id="song2"><img src="media/era/Bruno Mars/bruno_song-2.png" width="100%"></div>
-        <div class="track"><img src="media/era/Bruno Mars/bruno_photo01.jpg" width="100%"></div>
-        <div class="track" id="song3"><img src="media/era/Bruno Mars/bruno_song-3.png" width="100%"></div>
-        <div class="track"><img src="media/era/Bruno Mars/bruno_photo02.jpg" width="100%"></div>
-        <div class="track" id="song4"><img src="media/era/Bruno Mars/bruno_song-4.png" width="100%"></div>
+        
+        <div class="track" id="song1"></div>
+        <div class="track" id="song2"></div>
+        <div class="track" id="pic1"></div>
+        <div class="track" id="song3"></div>
+        <div class="track" id="pic2"></div>
+        <div class="track" id="song4"></div>
     </section>
       
     <!--
