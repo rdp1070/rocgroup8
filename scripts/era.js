@@ -35,7 +35,7 @@ var whichComp;
 */
 function init() {
     //DELETE THIS BOY
-    userArtist = "Bruno_Mars";
+    userArtist = "Foo_Fighters";
   
     html = "";
 	content = document.querySelector("#content");
