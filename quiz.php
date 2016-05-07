@@ -12,11 +12,6 @@
   </head>
   <body>
       <button id = "back" onclick = "goBack()"> <img src="media/quiz/backarrow.png"></button>
-      <?php 
-        #get pi from url
-        $pi = htmlspecialchars($_GET["pi"]);
-        echo $pi;
-      ?>
       <section id="content"></section>
       <!-- page content -->
       <div id = "question">
