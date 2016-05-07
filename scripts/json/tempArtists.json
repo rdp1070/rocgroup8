@@ -1,7 +1,7 @@
 {"currentArtist": "",
 "influencees": [{
   "id": "Bruno_Mars",
-	"artist": "Bruno Mars",
+	"artist": "BrunoMars",
 	"genre": "Pop"	
 },
 {
@@ -11,7 +11,7 @@
 },
 {
   "id": "Foo_Fighter",
-	"artist": "Foo Fighters",
+	"artist": "FooFighters",
 	"genre": "Rock"	
 }
 ]}

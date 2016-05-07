@@ -47,13 +47,10 @@ function setArtist() {
         }
     }
     
-    // print out the current artist in the console.
-    // console.log(cur_artist.artist);
-    answers_div.innerHTML = cur_artist.artist + "<div id=\"syncButton\" onclick =\"sync()\"><img src=\"media/quiz/sync.png\"></div>";
+    answers_div.innerHTML = "<div id=\"syncButton\" onclick =\"sync()\"><img src=\"media/quiz/sync.png\"></div>";
+    answers_div.innerHTML += "<img id=\"artist\" src=\"media/quiz/"+cur_artist.artist+".png\">";
+    answers_div.innerHTML += "<img id=\"artistBlock\" src=\"media/quiz/artistBlock.png\">";
     answers_div.innerHTML += "<span class=\"answer\" style = \"box-shadow:0 0 0 0\"></span>";
-    
-    //console.log(cur_artist.artist);
-    //console.log(cur_artist.id);
     
     $.ajax({
         data: 'artist=' + cur_artist.id + '&pi=' + piName,

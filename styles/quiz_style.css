@@ -62,24 +62,44 @@ header{
     box-shadow: 0px 0px 0px black;
 }
 
+#artist {
+    position: absolute;
+    left: 30%;
+    top: 15%;
+    height: 70%;
+}
+
+#artistBlock {
+    position: absolute;
+    height: 20%;
+    z-index: -1;
+    top: 53.5%;
+    left: 22.5%;
+}
+
 #syncButton {
     height: 10vh;
     width: 20vw;
-    position: relative;
+    position: absolute;
+    top: 65%;
+    right: 20.5%;
+    z-index: 2;
     box-shadow: 10px 5px 5px black;
-    
 } 
 
 #syncButton:active {
-    position: relative;
-    top:5px;
-    left: 5px;
+    height: 10vh;
+    width: 20vw;
+    position: absolute;
+    top: 66%;
+    right: 20%;
+    z-index: 2;
     box-shadow: 0px 0px 0px black;
 }
 
 #syncButton img{
-    height: 10vh;
-    width: 20vw;
+    height: 15vh;
+    width: 26vw;
 }
 
 button#back{
