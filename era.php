@@ -24,8 +24,6 @@
       
     <section id="leftCol">
         <img src="media/era/Bruno Mars/BrunoMars_header.png" width="100%">
-        <div id="artistName">
-        </div>
         <div class="track" id="song1"><img src="media/era/Bruno Mars/bruno_song-1.png" width="100%"></div>
         <div class="track" id="song2"><img src="media/era/Bruno Mars/bruno_song-2.png" width="100%"></div>
         <div class="track"><img src="media/era/Bruno Mars/bruno_photo01.jpg" width="100%"></div>
@@ -45,9 +43,9 @@
       
     <section id="rightCol">
       <div id="state">
-          <img class="button" id="a1" alt="The Beatles" src="media/era/the_beatles.jpg">
-          <img class="button" id="a2" alt="Michael Jackson" src="media/era/michael_jackson.jpg">
-          <img class="button" id="a3" alt="Elvis" src="media/era/elvis.jpg">
+          <div class="button" id="a1">Jimi Hendrix</div>
+          <div class="button" id="a2">Elvis Presley</div>
+          <div class="button" id="a3">Michael Jackson</div>
       </div>
       <img src="media/era/Michael Jackson/MicahelJackson_header.png" width="70%">
       <div id="rightStuff">

@@ -51,14 +51,15 @@ header {
 }
 
 .button{
-  height: 90px;
+  padding: 20px;
   transition: all .2s ease-in-out;
+  background-color: #292929;
+  display: inline-block;
+  width: 20%;
 }
 
-.button:focus{
-  -webkit-transform: scale(1.3);
-  -ms-transform: scale(1.3);
-  transform: scale(1.3);
+.button:hover{
+  background-color: #101010;
 }
 
 #content{
@@ -68,9 +69,11 @@ header {
 }
 
 #state{
-
+  position: absolute;
+  top: -102px;
+  right: 30px;
   float: right;
-  margin-right: 4%;
+
 }
 
 #leftCol{

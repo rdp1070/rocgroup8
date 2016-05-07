@@ -24,10 +24,16 @@ var song5, song6, song7, song8;
 var audio5, audio6, audio7, audio8;
 var fiveIsPlaying, sixIsPlaying, sevenIsPlaying, eightIsPlaying;
 
+//JSON Stuff
+var artists = [];
+var imageArray = [];
+
 /*
 * Set the variable to starting state and start the animation loop.
 */
 function init() {
+    //DELETE THIS BOY
+    userArtist = "Bruno_Mars";
   
 	html = "";
 	content = document.querySelector("#content");
@@ -58,7 +64,7 @@ function init() {
     
     //Setting up audio buttons
     song1 = document.querySelector("#song1");
-    song1.onclick = function(){playTrack(audio1, 1)};
+    song1.onclick = function(){playTrack(audio1, 1);};
     song2 = document.querySelector("#song2");
     song2.onclick = function(){playTrack(audio2, 2)};
     song3 = document.querySelector("#song3");
@@ -74,6 +80,55 @@ function init() {
     song7.onclick = function(){playCDTrack(audio7, 7)};
     song8 = document.querySelector("#song8");
     song8.onclick = function(){playCDTrack(audio8, 8)};
+    
+    loadLeftArtists();
+    //Giving JSON time to parse
+    setTimeout(setLeft, 1000)
+    console.log(userArtist);
+}
+
+/*
+*  Reads JSON file containing assets
+*
+*/
+function loadLeftArtists() {
+    'use strict';
+    var xhr = new XMLHttpRequest(),
+        url = "scripts/json/webInfo.json";
+    xhr.onload = function () {
+        // JSON.parse() converts a string to JSON. 
+        var myJSON = JSON.parse(xhr.responseText),
+            allArtists = myJSON.artists,
+            i;
+        for (i = 0; i < allArtists.length; i += 1) {
+            artists[i] = allArtists[i];
+            console.log(artists[i].header);
+        }
+    };
+    
+    xhr.open('GET', url, true);
+    xhr.send();
+    
+}
+
+/*
+* Sets front end for left side
+*
+*/
+function setLeft(){
+    var currentArtist;
+    
+    if (userArtist === "Bruno_Mars"){
+        currentArtist = artists[0];
+    }
+    
+    $(leftCol).append('<img src="' + currentArtist.header + '" width="100%">');
+    $(leftCol).append('<div class="track" id="song1"><img src="' + currentArtist.song1 + '" width="100%"></div>');
+    $(leftCol).append('<div class="track" id="song2"><img src="' + currentArtist.song2 + '" width="100%"></div>');
+    $(leftCol).append('<div class="track"><img src="' + currentArtist.pic1 + '" width="100%"></div>');
+    $(leftCol).append('<div class="track" id="song3"><img src="' + currentArtist.song3 + '" width="100%"></div>');
+    $(leftCol).append('<div class="track"><img src="' + currentArtist.pic2 + '" width="100%"></div>');
+    $(leftCol).append('<div class="track" id="song4"><img src="' + currentArtist.song4 + '" width="100%"></div>');
 }
 
 /*
@@ -407,8 +462,8 @@ function setComparison() {
 	a3.style="transform: scale(1.0)";
     
 	
-	this.style="transform: scale(1.3); margin-left: 15px; margin-right: 15px";
-	//this.style="margin: 10px";
+	//this.style="transform: scale(1.3); margin-left: 15px; margin-right: 15px";
+	this.style="background-color: #101010;";
 	//hide the buttons
 	//state.style.display="none";
 }
