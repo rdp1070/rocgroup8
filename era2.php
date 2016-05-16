@@ -12,7 +12,11 @@
   </head>
   <body>
     <!-- gets artist from URL -->
-    <?php include 'scripts/artist.php';?>
+    <?php 
+    
+    #Grab the artist and pi from the javascript
+    $artist = $_GET['artist'];
+    ?>
     
     <!-- page content -->
     <header class="clearfix">
