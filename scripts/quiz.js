@@ -14,6 +14,7 @@ var state = "start";
 */
 function loadInfluences() {
     'use strict';
+    // load in the tempArists.json
     var xhr = new XMLHttpRequest(),
         url = "scripts/json/tempArtists.json";
     xhr.onload = function () {
@@ -47,6 +48,7 @@ function setArtist() {
         }
     }
     
+    // DOM Injection. Read the string as HTML, allowing us to perfectly put in our data.
     answers_div.innerHTML = "<div id=\"syncButton\" onclick =\"sync()\"><img src=\"media/quiz/sync.png\"></div>";
     answers_div.innerHTML += "<img id=\"artist\" src=\"media/quiz/"+cur_artist.artist+".png\">";
     answers_div.innerHTML += "<img id=\"artistBlock\" src=\"media/quiz/artistBlock.png\">";
@@ -60,8 +62,6 @@ function setArtist() {
             //console.log(msg);
         }
     });
-    
-    //console.log("select artist complete");
 }
 
 /*
@@ -70,11 +70,14 @@ function setArtist() {
 function enterAnim() {
     'use strict';
     var dir = -1;
+    // when the document is ready, if the state is artist fade away
     $(document).ready(function () {
         if (state === "artist") {
             $('#answers').fadeTo(600, 1);
         }
-        
+        // for each of the items with class answer
+        // have them animate from the top or bottom depending on their position
+        // ending in the middle, just offset.
         $.each($('.answer'), function (index) {
             $(this).animate({top: "+=" + 700 * dir + "px"}, 700, 'swing', function () {
                 // this stuff happens when the animation is over
@@ -93,6 +96,8 @@ function exitAnim() {
     'use strict';
     var dir = -1;
     $(document).ready(function () {
+        // After the answer is submitted come here
+        // Slide the items with class answer off of the screen.
         $.each($('.answer'), function (index) {
             $(this).animate({top: "+=" + 700 * dir + "px"}, 700, 'swing', function () {
                 // this stuff happens when the animation is over
@@ -107,7 +112,8 @@ function exitAnim() {
     });
 }
 
-//the weird functions for switching states
+// The functions that get called onClick of the first screen answers.
+// These change states depending on the one that is called. 
 function stateQ() {
     state = "questions";
     exitAnim();
@@ -140,23 +146,31 @@ function changeQuestion(qNum) {
         qNum = 0;
         currentNum = 0;
     }
+    
+    // Big if section that determines what changeQuestion does based on 
+    // which state the thing is currently in.
+    
     if (state === "questions") {
        
         // clear the div. If you don't it will weirdly double up.
         answers_div.innerHTML = "";
         if (questions[qNum]) {
+            // the questions innerHTML is injected with the text of the appropriate question.
             questionValue.innerHTML = questions[qNum].txt;
             var i, x, div_holder;
-            //console.log(questions[qNum].answers.length);
-
+            
+            // for each answer in the json, make anew answer item
             for (i = 0; i < questions[qNum].answers.length; i += 1) {
                 // make a button with an image tag inside of it. 
                 // the image should have a source that is stored in the json.
                 answers_div.innerHTML += "<img class=\"answer\" onclick=\"goForward(" + i + ")\" src = \"" +  questions[qNum].answers[i].img + "\"></img>";
 
             }
-
+            
+            // this is so I don't have to cal jquery everytime I want to get things 
+            // involving the answers.
             div_holder = document.querySelectorAll(".answer");
+            // for each one, make sure that the width is proper depending on the amount of answers.
             for (x = 0; x < div_holder.length; x += 1) {
                 if (x % 2 === 1) {
                     div_holder[x].setAttribute("style", "top: -710px; max-width:" + 100 / questions[qNum].answers.length + "%;");
@@ -174,11 +188,12 @@ function changeQuestion(qNum) {
         answers_div.innerHTML = "";
         questionValue.innerHTML = "Pick and Artist";
          
-        // This section is fucky, continue working on it. 
+        // DOM Injection. Use this to jam in strings to be read as HTML.
         answers_div.innerHTML += "<img class=\"answer\" onclick=\"(function(){answers[0] = questions[0].answers[0].txt; setArtist();})();\" src = \"media/quiz/beyoncebg.png\"></img>";
         answers_div.innerHTML += "<img class=\"answer\" onclick=\"(function(){answers[0] = questions[0].answers[1].txt; setArtist();})();\" src = \"media/quiz/brunobg.png\"></img>";
         answers_div.innerHTML += "<img class=\"answer\" onclick=\"(function(){answers[0] = questions[0].answers[2].txt; setArtist();})();\" src = \"media/quiz/foobg.png\"></img>";
         
+        // for each one, make sure that the width is proper depending on the amount of answers.
         div_holder = document.querySelectorAll(".answer");
         for (x = 0; x < div_holder.length; x += 1) {
                 if (x % 2 === 1) {
@@ -233,7 +248,6 @@ function goBack() {
     } else {
         exitAnim();
         currentNum -= 1;
-        //changeQuestion(currentNum);   
     }
 }
 
@@ -287,6 +301,7 @@ function init() {
     loadQuestions();
     var individual_answers, i;
     
+    // use querySelectors to get the appropriate page elements
     questionValue = document.querySelector("#questionTitle");
     answers_div = document.querySelector("#answers");
     individual_answers = answers_div.querySelectorAll(".answer");

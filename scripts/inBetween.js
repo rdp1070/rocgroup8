@@ -94,8 +94,6 @@ window.onload = init; // on the page booting up, call the init function!
 		
 		/*
 		* Compare the new data to the old data
-		* If the oldData has a certain amount of changes from the new data
-		* Do some stuff!
 		*/
 		function motionDetection(data,oldData, trnsData){
 			var threshold = 13;
@@ -110,6 +108,8 @@ window.onload = init; // on the page booting up, call the init function!
 						// If you do things here, it does it a huge amount of times and slows
 						// everything down. So we do it in a different function, not in a bunch
 						// of for loops. 
+                        
+                        // this remains because we need the else case, and we need this case to do nothing.
 					} else {
 
 						// if the red green or blue break the threshold add that number to the array of 
@@ -156,9 +156,5 @@ window.onload = init; // on the page booting up, call the init function!
 		function drawAnim(ctx){
 			// This is where the animation gets drawn
 			// Take in the img data from a video provided by dez
-			// :D !!!
             ctx.drawImage(anim, 0, 0, w, h);
-			// Right now it just makes the screen black. 
-			//ctx.fillStyle = "black";
-			//ctx.fillRect(0,0,w,h);
 		}
