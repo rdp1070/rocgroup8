@@ -594,7 +594,7 @@ function playCDTrack(audio, num) {
 /*
 *	Grab artists from an external file
 *	using id from php url
-*   initiates the updating of html for artist information
+* initiates the updating of html for artist information
 */
 function fetchArtists(id) {
   console.log(id);

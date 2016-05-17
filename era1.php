@@ -13,8 +13,7 @@
   <body>
     <!-- gets artist from URL -->
     <?php 
-    
-    #Grab the artist and pi from the javascript
+    #Grab the artist from the url
     $artist = $_GET['artist'];
     
     ?>

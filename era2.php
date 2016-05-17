@@ -13,9 +13,9 @@
   <body>
     <!-- gets artist from URL -->
     <?php 
-    
-    #Grab the artist and pi from the javascript
+    #Grab the artist from the Url
     $artist = $_GET['artist'];
+    
     ?>
     
     <!-- page content -->
