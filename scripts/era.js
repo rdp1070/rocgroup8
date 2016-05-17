@@ -34,9 +34,10 @@ var whichComp;
 * Set the variable to starting state and start the animation loop.
 */
 function init() {
-    //DELETE THIS BOY
-    userArtist = "Foo_Fighters";
+    //Uncomment below if RFID is not active
+    //userArtist = "Foo_Fighters";
   
+    //Hook up HTML elements
     html = "";
 	content = document.querySelector("#content");
 	state = document.querySelector("#state");
@@ -44,7 +45,7 @@ function init() {
     rightCol = document.querySelector("#rightCol");
 	artistName = document.querySelector("#artistName");
 	
-	//set up artist buttons
+	//Set up artist buttons
 	a1 = document.querySelector("#a1");
 	a1.onclick = function(){setComparison(0);};
 	a2 = document.querySelector("#a2");
@@ -54,10 +55,10 @@ function init() {
     
     
     //Setting up audio
-    //audio1 = new Audio("media/era/Bruno Mars/songs/when_i_was_your_man.mp3");
-    //audio2 = new Audio("media/era/Bruno Mars/songs/treasure.mp3");
-    //audio3 = new Audio("media/era/Bruno Mars/songs/treasure.mp3");
-    //audio4 = new Audio("media/era/Bruno Mars/songs/treasure.mp3");
+    audio1 = new Audio("media/era/Bruno Mars/songs/when_i_was_your_man.mp3");
+    audio2 = new Audio("media/era/Bruno Mars/songs/treasure.mp3");
+    audio3 = new Audio("media/era/Bruno Mars/songs/treasure.mp3");
+    audio4 = new Audio("media/era/Bruno Mars/songs/treasure.mp3");
     //CD Audio
     audio5 = new Audio("media/era/Bruno Mars/songs/treasure.mp3");
     audio6 = new Audio("media/era/Bruno Mars/songs/treasure.mp3");
@@ -83,19 +84,19 @@ function init() {
     song8 = document.querySelector("#song8");
     song8.onclick = function(){playCDTrack(audio8, 8)};
     
+    //References which influencer we're using
     whichComp = 1;
     
+    //Load artist data from JSON
     loadLeftArtists();
     loadRightArtists();
-    //Giving JSON time to parse
+    //Giving JSON time to parse then place elements
     setTimeout(setLeft, 1000);
     setTimeout(setRight, 1000);
-    //setTimeout(setQueries, 1200);
 }
 
 /*
 *  Reads JSON file containing assets
-*
 */
 function loadRightArtists() {
     'use strict';
@@ -109,20 +110,15 @@ function loadRightArtists() {
         for (i = 0; i < allRightArtists.length; i += 1) {
             subArtists[i] = allRightArtists[i];
             console.log(subArtists[i].subArtists[0].first[0].header);
-        }
-            
+        }   
     };
-    
-
-    
     xhr.open('GET', url, true);
     xhr.send();
-    
 }
 
 /*
-* Sets front end for left side
-*
+* Sets front end for right side based on which artist is chosen
+* Clears everything and then places new data in HTML format
 */
 function setRight(){
     var currentSubArtist;
@@ -141,7 +137,7 @@ function setRight(){
     console.log(currentSubArtist.subArtists[0].second[0].name);
     console.log(currentSubArtist.subArtists[0].third[0].name);
     
-    
+    //Empty data first
     $("#a1").empty();
     $("#a2").empty();
     $("#a3").empty();
@@ -257,7 +253,6 @@ function setRight(){
 
 /*
 *  Reads JSON file containing assets
-*
 */
 function loadLeftArtists() {
     'use strict';
@@ -280,8 +275,8 @@ function loadLeftArtists() {
 }
 
 /*
-* Sets front end for left side
-*
+* Sets front end for left side based on main artist
+* Places data in HTML format
 */
 function setLeft(){
     var currentArtist;
@@ -599,27 +594,20 @@ function playCDTrack(audio, num) {
 /*
 *	Grab artists from an external file
 *	using id from php url
-* initiates the updating of html for artist information
+*   initiates the updating of html for artist information
 */
 function fetchArtists(id) {
   console.log(id);
   
   //AJAX request to webinfo json to get artist information
   $.getJSON("scripts/json/webInfo.json", function(data){
-    //console.log(data);
     var artists = data.artists;
-    //console.log(artists);
-    
-    //
-    for ( var i = 0; i < artists.length; i++) {
       
+    for ( var i = 0; i < artists.length; i++) {
       var resultID = artists[i].id;
       
       if (resultID == id) {
-        
         userArtist = id;
-        
-        //Call update to setup the page content and pass in the artist object
         update(artists[i]);
       }
     }
@@ -627,13 +615,9 @@ function fetchArtists(id) {
 }
 
 /*
-*   Sets up the users artist variable
-*   moves state forward
+*   Sets the right data based on which influence artist is chosen
 */
 function setComparison(counter) {
-	//content.innerHTML = "<h1>Compare " + userArtist + " with " + this.alt + "</h1>";
-	//artistName.innerHTML = userArtist;
-	
 	//Make all other buttons regular size
 	a1.style="transform: scale(1.0)";
 	a2.style="transform: scale(1.0)";
@@ -646,36 +630,5 @@ function setComparison(counter) {
     } else if (counter == 2){
         whichComp = 3;
     }
-    
     setRight();
-
 }
-
-
-/* 
-* Update the content of page for particular artist
-*/
-function update(artistInfo) {
-  
-  console.log(artistInfo);
-  
-	html += "<h1>" + userArtist + " is your artist.</h1>";
-	
-	content.innerHTML = html;
-
-	// set up another update to be called in 1/60 of a second
-	//window.requestAnimationFrame(update);
-}
-
-
-/* 
-* Set the station to active or inactive
-*/
-/*function switchState() {
-	active = !active;
-	
-	state.style.display="block";
-    leftCol.style.display="block";
-    rightCol.style.display="block";
-	this.style.display="none";
-}*/
