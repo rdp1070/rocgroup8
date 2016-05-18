@@ -21,6 +21,7 @@ try {
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   echo "Connected successfully";
   
+  //SQl statement to be run, updates the current artist for the pi that is reading the totem
   $sql = "UPDATE `totems` SET `ARTIST` = '" . $cArtist . "' WHERE `NAME` = '" . $piN . "'";
   
   // Prepare statement

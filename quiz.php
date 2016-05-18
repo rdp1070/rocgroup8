@@ -11,6 +11,12 @@
 	
   </head>
   <body>
+    <!-- gets artist from URL -->
+    <?php 
+    #Grab the pi from the Url
+    $pi = $_GET['pi'];
+    
+    ?>
       <button id = "back" onclick = "goBack()"> <img src="media/quiz/backarrow.png"></button>
       <section id="content"></section>
       <!-- page content -->
@@ -23,7 +29,7 @@
       <script>
         //set pi variable and pass to javascript file
         var piID = '<?php echo $pi?>';
-      
+        
         getPi(piID);
       </script>
   </body>

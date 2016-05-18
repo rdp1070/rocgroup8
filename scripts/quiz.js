@@ -54,6 +54,7 @@ function setArtist() {
     answers_div.innerHTML += "<img id=\"artistBlock\" src=\"media/quiz/artistBlock.png\">";
     answers_div.innerHTML += "<span class=\"answer\" style = \"box-shadow:0 0 0 0\"></span>";
     
+    //Make a call upon the loadArtist.php script and send the current artist and pi name
     $.ajax({
         data: 'artist=' + cur_artist.id + '&pi=' + piName,
         url: 'scripts/loadArtist.php',
@@ -289,6 +290,7 @@ function loadQuestions() {
 
 }
 
+//Set pi name for the rest of the file to use, needed for setArtist
 function getPi(pi) {
     'use strict';
     piName = pi;
